@@ -1,0 +1,12 @@
+/* Phim tắt chú thích "CTRL + /" */
+
+a{
+    text-decoration: none; /* để tắt dòng kẻ ngang dưới đường link */
+    text-transform: uppercase; /* chữ trong phần tử này sẽ viết hoa hết*/
+    background-color: aqua; /* màu nền của phần tử */
+    display: block; /* để hiện khối*/
+    width: 500px;
+    margin-left: 50px; /* khoảng cách lề bên trái*/
+    margin-top: 50px; /* khoảng cách với lề trên*/
+    padding: 10px; /* thêm khoảng không cho thành phần*/
+}   
