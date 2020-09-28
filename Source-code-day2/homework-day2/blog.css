@@ -53,6 +53,7 @@ img{
     width: 700px;
     margin-top: 15px;
     margin-bottom: 15px;
+    max-width: 100%;
 }
 
 blockquote{
