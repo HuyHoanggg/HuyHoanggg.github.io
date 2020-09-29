@@ -1,7 +1,15 @@
+body{
+    background-color: #f4f7fa;  
+}
 #container{
-    width: 80%;
+    background-color: white;
+    display: block;
+    width: 60%;
     margin: auto;
-    padding: 30px;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 40px;
+    padding-bottom: 40px;
     line-height: 1.5;
     font-size: 20px;
 }
@@ -14,8 +22,16 @@
     text-transform: uppercase;  
 }
 
+.content{
+    text-align: justify;
+}
+
 .end-form{
-    /* margin-right: 100px; */
     margin-left: 50%;
     text-align: center;
+    line-height: 1.5;
+}
+
+.sign{
+    padding-top: 80px;
 }
