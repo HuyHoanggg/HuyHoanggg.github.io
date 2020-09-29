@@ -22,6 +22,10 @@ body{
     text-transform: uppercase;  
 }
 
+.info{
+    padding-top: 30px;
+}
+
 .content{
     text-align: justify;
 }
