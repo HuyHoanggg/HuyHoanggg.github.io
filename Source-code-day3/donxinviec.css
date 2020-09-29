@@ -1,0 +1,21 @@
+#container{
+    width: 80%;
+    margin: auto;
+    padding: 30px;
+    line-height: 1.5;
+    font-size: 20px;
+}
+
+.top-form{
+    text-align: center;
+}
+
+.top{
+    text-transform: uppercase;  
+}
+
+.end-form{
+    /* margin-right: 100px; */
+    margin-left: 50%;
+    text-align: center;
+}
