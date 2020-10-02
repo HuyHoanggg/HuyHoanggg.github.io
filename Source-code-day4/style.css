@@ -65,7 +65,7 @@ body{
 }
 
 .content{
-    margin: 80px;
+    margin: 70px 110px 0px 110px;
     display:flex;
     justify-content: space-between;
 }
@@ -152,10 +152,10 @@ body{
     margin-left: auto;
 }
 
-/* .layout{
-    margin-bottom: 30px;
+.layout{
+    margin-bottom: 40px;
     overflow: hidden;
-} */
+}
 
 .row{
     display: flex;
@@ -202,7 +202,11 @@ a {
 
 .product {
     background-color: #e4f2fd;
-    padding: 1rem 0;    
+    padding: 10px 0;    
+}
+
+.product .content{
+    padding-bottom: 80px;
 }
 
 .carouseller {
@@ -304,12 +308,92 @@ a {
     margin: 0 35px;
 }
 
+footer, footer a {
+    color: #919294;
+    font-size: 14px;
+    padding: 3rem 0 3rem 0;
+    line-height: 2.5em;
+}
+
+footer h4 {
+    color: #fff;
+    font-size: 18px
+}
+
+
+
 .container-fluid {
+    padding-left: 0px;
+    padding-right: 0px;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.footer {
+    font-size: 14px;
+}
+
+.social-links ul {
+    list-style-type: none
+}
+
+.desktop.social-links li {
+    float: left;
+    margin-left: 1rem;
+    margin-right: .5rem;
+    font-size: 1rem
+}
+
+.desktop.social-links {
+    height: 50px;
+    display: flex;
+    justify-content: flex-start;
+    margin: auto
+}
+
+.footer-info li a:hover {
+    color: #919294
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.col-md-3 {
+    flex: 0 0 25%;
+    max-width: 25%;
+}
+
+.list-unstyled {
     padding-left: 0;
-    padding-right: 0;
+    list-style: none;
+}
+
+ol, ul {
+    margin: 0 0 1rem 0;
+}
+
+ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+
+.col-md-3, .col-md-6{
+    position: relative;
     width: 100%;
     padding-right: 15px;
     padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
+}
+
+.desktop.social-links li{
+    display: block;
 }
