@@ -308,6 +308,10 @@ a {
     margin: 0 35px;
 }
 
+.frame{
+    margin: 80px 120px;
+}
+
 footer, footer a {
     color: #919294;
     font-size: 14px;
@@ -319,8 +323,6 @@ footer h4 {
     color: #fff;
     font-size: 18px
 }
-
-
 
 .container-fluid {
     padding-left: 0px;
