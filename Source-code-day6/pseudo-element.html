@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Phóng to chữ cái đầu tiên */
+        .doan-van-1::first-letter{
+            font-size: 50px;
+        }
+        /* Thêm màu cho dòng đầu tiên trong văn bản */
+        .doan-van-1::first-line{
+            color: darkcyan;
+        }
+        /* Thêm chữ Tôi đằng trước đoạn p class money */
+        .money::before{
+            content: "Tôi ";
+        }
+        /* Thêm chữ VNĐ đằng sau đoạn p class money */
+        .money::after{
+            content: "VNĐ";
+        }
+        /* Thêm màu cho  */
+        p::after{
+            width: 50px;
+            height: 10px;
+            background-color: darkkhaki;
+        }
+        /* Bôi đen 1 đoạn văn bản */
+        .doan-van-1::selection{
+            background-color: gray;
+        }
+
+        .money{
+            position: relative;
+        }
+
+        .money::after{
+            position: absolute;
+            width: 100px;
+            height: 30px;
+            background-color: red;
+            top: 0px;
+            right: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <p class="doan-van-1">
+        Anh Daniel Holloway, 55 tuổi, đã xây dựng "Bedouin Tree-Shed" quanh hai thân cây sau nhà anh ở Blackheath,
+        London. Anh dùng căn nhà này làm nơi trú ẩn trong thời phong tỏa, cùng với vợ Beccy, 51 tuổi và hai con 12-14
+        tuổi.
+
+        "Khi giãn cách xã hội, nơi đây thực sự mang đến cho chúng tôi một không gian riêng tư để các nhà gần nhau hơn.
+        Chúng tôi đã dành nhiều thời gian để nghe nhạc, chơi game, hay cùng lặng lẽ suy tư... trong đó", Daniel, một nhà
+        tổ chức các chuyến thám hiểm, chia sẻ.
+    </p>
+
+    <p class="money">có 1 tờ tiền giá trị 10.000</p>
+    <p class="money">có 1 tờ tiền giá trị 20.000</p>
+    <p class="money">có 1 tờ tiền giá trị 30.000</p>
+</body>
+
+</html>
