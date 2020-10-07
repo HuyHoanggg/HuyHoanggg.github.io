@@ -1,0 +1,22 @@
+.ex1{
+    width: 300px;
+    height: 100px;
+    background: #3E82AC;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition-property: all;
+    transition-duration: 2s;
+}
+
+p{
+    font-family: sans-serif;
+    font-size: 20px;
+    color: white;
+}
+
+.ex1:hover{
+    border-radius: 100px;
+    background-color: rgb(16, 187, 101);
+}
