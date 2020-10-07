@@ -1,0 +1,85 @@
+* {
+    box-sizing: border-box;
+}
+
+.gallery{
+    width: 100%;
+    height: 400px;
+    display: flex;
+    flex-flow: wrap row;
+}
+
+.image__autumn {
+    width: 25%;
+    height: 500px;
+    margin: 60px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 1);
+    background-color: white;
+}
+
+figure {
+    width: 80%;
+    height: 70%;
+    overflow: hidden;
+}
+
+img {
+    width: 100%;
+    transition: all 2s;
+    object-fit: cover;
+}
+
+figcaption {
+    font-size: 20px;
+    font-weight: 500;
+    opacity: 0.5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition-duration: 1s;
+}
+
+.image__autumn:hover img{
+    transform: scale(1.5);
+}
+
+.image__autumn:hover figcaption{
+    opacity: 1.5;
+    color: rgb(241, 155, 43);
+    transition-timing-function: ease-out;
+}
+
+.image__winter {
+    width: 25%;
+    height: 400px;
+    margin: 60px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 1);
+    background-color: white;
+}
+
+.image__winter:hover img{
+    transform: scale(1.4);
+    transition-timing-function: ease-in;
+}
+
+.image__winter:hover figcaption{
+    opacity: 1.5;
+    color: rgb(43, 79, 241);
+}
+
+.image__spring {
+    width: 25%;
+    height: 250px;
+    margin: 60px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 1);
+    background-color: white;
+}
+
+.image__spring:hover img{
+    transform: scale(1.5);
+}
+
+.image__spring:hover figcaption{
+    opacity: 1.5;
+    color: rgb(28, 226, 61);
+}
