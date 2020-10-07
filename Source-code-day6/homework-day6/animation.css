@@ -20,3 +20,63 @@ p{
     border-radius: 100px;
     background-color: rgb(16, 187, 101);
 }
+
+.ex2{
+    margin: 100px;
+    width: 300px;
+    height: 300px;
+    background: rgb(231, 234, 236);
+    display: flex;
+    flex-flow: wrap row;
+}
+
+.image__ex2{
+    margin:2px;
+    padding: 3px;
+    width: 90px;
+    height: 90px;
+    transition-property: all;
+}
+
+.image__ex2:hover{
+    width: 150px;
+    height: 150px;
+}
+
+.ex3{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.heart{
+    display: flex;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    animation: heartBeat 2.5s infinite;
+}
+
+@keyframes heartBeat {
+    0% {
+      transform: scale(0.8);
+    }
+    5% {
+      transform: scale(0.9);
+    }
+    10% {
+      transform: scale(0.8);
+    }
+    15% {
+      transform: scale(1);
+    }
+    40% {
+      transform: scale(0.8);
+    }
+    100% {
+      transform: scale(0.8);
+    }
+  }
+  
