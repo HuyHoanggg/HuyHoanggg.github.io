@@ -41,6 +41,7 @@ p{
 .image__ex2:hover{
     width: 150px;
     height: 150px;
+    transform: scale(1.2);
 }
 
 .ex3{
