@@ -1,0 +1,169 @@
+body{
+    font-family: SFProDisplay-Regular, Helvetica, Arial, sans-serif;
+    background-color:   #F0F2F5;
+}
+
+.form{
+    width: 100%;
+    margin-top: 50px;
+}
+
+.top{
+    padding-top: 16px;
+    padding-left: 16px;
+}
+
+.content{
+    margin-top: -3px;
+    padding:16px;
+    border-top: 1px solid #dadde1;
+}
+
+.sign-up{
+    width: 450px;
+    height: 505px;
+    margin: auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .1), 0 8px 16px rgba(0, 0, 0, .1);
+}
+
+.sign-up-form{
+    background-color: #fff;
+    border-radius: 8px;
+}
+
+h1{
+    margin: -5px 0px -5px 0px;
+    font-size: 32px;
+    color: #1c1e21;
+}
+
+p, .dob>label, .gender>label {
+    color: #606770;
+    margin-top: 10px;
+}
+
+#firstname, #surname, #contact, #password{
+    width: 94%;
+    background-color: #F5F6F7;
+    padding: 11px;
+    font-size: 15px;
+    line-height: 16px;
+    border: 1px solid #dddfe2;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    outline: none;
+}
+
+#firstname{
+    width: 179px;
+    float: left;
+}
+
+#surname{
+    width: 180px;
+    float: left;
+    margin-left: 10px;
+}
+
+.dob>label, .gender>label{
+    font-size: 12px;
+    font-weight: normal;
+    line-height: 20px;
+}
+
+select{
+    width: 130px;
+    border-radius: 4px;
+    color: #1c1e21;
+    font-size: 15px;
+    font-weight: normal;
+    height: 39px;
+    border: 1px solid #dddfe2;
+    float: left;
+    padding: 5px;
+}
+
+#month{
+    margin-left: 12px;
+    width: 130px;
+}
+
+#year{
+    margin-left: 12px;
+    width: 134px;
+}
+
+.gender{
+    margin-top: 35px;
+}
+
+.gender-type{
+    width: 100%;
+    display: flex;
+}
+
+.gender-type-3{
+    border: 1px solid #ccd0d5;
+    flex: 1 0 auto;
+    font-weight: normal;
+    height: 39px;
+    position: relative;
+    border-radius: 4px;
+}
+
+.gender-type-3-male{
+    border: 1px solid #ccd0d5;
+    flex: 1 0 auto;
+    font-weight: normal;
+    height: 39px;
+    margin:0px 12px;
+    position: relative;
+    border-radius: 4px;
+}
+
+.gender-type-3>label, .gender-type-3-male>label{
+    color: #1c1e21;
+    font-size: 15px;
+    line-height: 39px;
+    padding: 0px 28px 0 10px;
+}
+
+.gender-type-3>input, .gender-type-3-male>input{
+    height: 41px;
+    margin: 0;
+    position: absolute;
+    right: 10px;
+    top: 0;
+}
+
+.terms p{
+    color: #777;
+    font-size: 11px;
+    line-height: 13px;
+}
+
+a{
+    text-decoration: none;
+    color: #385898;
+}
+
+.sign-up-button{
+    width: 195px;
+    background-color:#36A420;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    font-size: 18px;
+    line-height: 35px;
+    margin-top: 10px;
+    cursor: pointer;
+    margin-left: 110px;
+}
+
+.sign-up-button:hover{
+    color: #EAECEF;
+    outline: none;
+}
