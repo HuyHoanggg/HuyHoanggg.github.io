@@ -96,7 +96,7 @@ select{
 }
 
 .gender{
-    margin-top: 35px;
+    margin-top: 30px;
 }
 
 .gender-type{
@@ -113,24 +113,18 @@ select{
     border-radius: 4px;
 }
 
-.gender-type-3-male{
-    border: 1px solid #ccd0d5;
-    flex: 1 0 auto;
-    font-weight: normal;
-    height: 39px;
+.gender-male{
     margin:0px 12px;
-    position: relative;
-    border-radius: 4px;
 }
 
-.gender-type-3>label, .gender-type-3-male>label{
+.gender-type-3>label{
     color: #1c1e21;
     font-size: 15px;
     line-height: 39px;
     padding: 0px 28px 0 10px;
 }
 
-.gender-type-3>input, .gender-type-3-male>input{
+.gender-type-3>input{
     height: 41px;
     margin: 0;
     position: absolute;
