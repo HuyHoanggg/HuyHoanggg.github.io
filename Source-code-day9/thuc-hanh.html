@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin-left: 400px;
+        }
+        table,th,td{
+            font-family: sans-serif;
+            border: 1px solid #D8E3E5;
+            border-collapse: collapse;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        
+        .table-1{
+            width: 700px;
+        }
+
+        .table-1 td, .table-1 th{
+            text-align: center;
+            padding: 10px;
+            font-weight: bold;
+        }
+
+        .two-table>.table-2>td,.two-table>.table-2>th{
+            padding: 100px;
+        }
+
+        .title{
+            background-color: #FFF1BF;
+            border-top:1px solid white;
+            border-left:1px solid white;
+            border-right:1px solid white;
+        }
+
+        span{
+            color: red;
+        }
+
+        .highlight{
+            background-color: #F3F3F3;
+        }
+
+        .highlight-number{
+            font-weight: bold;
+            font-size: 25px;
+        }
+        
+        .giai{
+            width: 100px;
+        }
+
+        .two-table{
+            display: flex;
+            width: 700px;
+        }
+
+        .table-2{
+            width: 340px;
+            margin-right: 20px;
+            padding: 100px;
+        }
+
+        .column-side{
+            width: 120px;
+            text-align: center;
+        }
+ 
+        .column-side-1{
+            text-align: left;
+            padding-left: 15px;
+        }
+
+        .column-side-2{
+            text-align: right;
+            padding-right: 15px;
+        }
+
+        .column-side, .column-side-1, .column-side-2{
+            font-size: 17px;
+            font-weight: bold;
+            padding-top: 3px;
+            padding-bottom: 3px;
+        }
+    </style>
+</head>
+<body>
+    <table class="table-1">
+        <tr>
+            <th class="title" colspan="13"><span>Kết quả xổ số miền Bắc</span> ngày 25/09/2020</th>
+            
+        </tr>
+        <tr>
+            <th colspan="13"><span>3QV</span>-<span>9QV</span>-<span>4QV</span>-<span>12QV</span>-<span>13QV</span>-<span>14QV</span></th>
+        </tr>
+        <tr>
+            <td class="giai">Đặc biệt</td>
+            <td class="highlight-number" colspan="12"><span>98018</span></td>
+        </tr>
+        <tr class="highlight">
+            <td class="giai">Giải nhất</td>
+            <td colspan="12">47391</td>
+        </tr>
+        <tr>
+            <td class="giai">Giải nhì</td>
+            <td colspan="6">46411</td>
+            <td colspan="6">34513</td>
+        </tr>
+        <tr class="highlight">
+            <td rowspan="2">Giải ba</td>
+            <td colspan="4">02594</td>
+            <td colspan="4">91533</td>
+            <td colspan="4">20134</td>
+        </tr>
+        <tr class="highlight">
+            <td colspan="4">73795</td>
+            <td colspan="4">31040</td>
+            <td colspan="4">19707</td>
+        </tr>
+        <tr>
+            <td class="giai">Giải tư</td>
+            <td colspan="3">6049</td>
+            <td colspan="3">1001</td>
+            <td colspan="3">4034</td>
+            <td colspan="3">5340</td>
+        </tr>
+        <tr class="highlight">
+            <td class="giai" rowspan="2">Giải năm</td>
+            <td colspan="4">02594</td>
+            <td colspan="4">91533</td>
+            <td colspan="4">20134</td>
+        </tr>
+        <tr class="highlight">
+            <td colspan="4">73795</td>
+            <td colspan="4">31040</td>
+            <td colspan="4">19707</td>
+        </tr>
+        <tr>
+            <td class="giai">Giải sáu</td>
+            <td colspan="4">321</td>
+            <td colspan="4">198</td>
+            <td colspan="4">354</td>
+        </tr>
+        <tr class="highlight">
+            <td class="giai">Giải bảy</td>
+            <td class="highlight-number" colspan="3"><span>21</span></td>
+            <td class="highlight-number" colspan="3"><span>32</span></td>
+            <td class="highlight-number" colspan="3"><span>54</span></d>
+            <td class="highlight-number" colspan="3"><span>15</span></td>
+        </tr>
+    </table>
+    <br/>
+    <div class="two-table">
+        <div>
+            <table class="table-2">
+                <tr>
+                    <th class="highlight column-side">Đầu</th>
+                    <th class="highlight column-side-1">Đuôi</th>
+                </tr>
+                <tr>
+                    <td class="column-side"><span>0</span></td>
+                    <td class="column-side-1">1,2,3,4</td>
+                </tr>
+                <tr>
+                    <td class="column-side"><span>1</span></td>
+                    <td class="column-side-1">1,2,3,4</td>
+                </tr>
+                <tr>
+                    <td class="column-side"><span>2</span></td>
+                    <td class="column-side-1">1,2,<span>3</span>,4</td>
+                </tr>
+                <tr>
+                    <td class="column-side"><span>3</span></td>
+                    <td class="column-side-1">1,2,3,4</td>
+                </tr>
+                <tr>
+                    <td class="column-side"><span>4</span></td>
+                    <td class="column-side-1">1,2,3,4</td>
+                </tr>
+                <tr>
+                    <td class="column-side"><span>5</span></td>
+                    <td class="column-side-1">1,2,3,4</td>
+                </tr>
+                <tr>
+                    <td class="column-side"><span>6</span></td>
+                    <td class="column-side-1">1,2,3,4</td>
+                </tr>
+                <tr>
+                    <td class="column-side"><span>7</span></td>
+                    <td class="column-side-1">1,2,3,4</td>
+                </tr>
+                <tr>
+                    <td class="column-side"><span>8</span></td>
+                    <td class="column-side-1">1,2,3,4</td>
+                </tr>
+                <tr>
+                    <td class="column-side"><span>9</span></td>
+                    <td class="column-side-1">1,2,3,4</td>
+                </tr>
+            </table>
+        </div>
+        <div>
+            <table class="table-2">
+                <tr>
+                    <th class="highlight column-side-2">Đầu</th>
+                    <th class="highlight column-side">Đuôi</th>
+                </tr>
+                <tr>
+                    <td class="column-side-2">1,2,3,4</td>
+                    <td class="column-side"><span>0</span></td>
+                </tr>
+                <tr>
+                    <td class="column-side-2">1,2,3,4</td>
+                    <td class="column-side"><span>1</span></td>
+                </tr>
+                <tr>
+                    <td class="column-side-2">1,2,3,4</td>
+                    <td class="column-side"><span>2</span></td>
+                </tr>
+                <tr>
+                    <td class="column-side-2">1,2,3,4</td>
+                    <td class="column-side"><span>3</span></td>
+                </tr>
+                <tr>
+                    <td class="column-side-2">1,<span>2</span>,3,4</td>
+                    <td class="column-side"><span>4</span></td>
+                </tr>
+                <tr>
+                    <td class="column-side-2">1,2,3,4</td>
+                    <td class="column-side"><span>5</span></td>
+                </tr>
+                <tr>
+                    <td class="column-side-2">1,2,3,4</td>
+                    <td class="column-side"><span>6</span></td>
+                </tr>
+                <tr>
+                    <td class="column-side-2">1,2,3,4</td>
+                    <td class="column-side"><span>7</span></td>
+                </tr>
+                <tr>
+                    <td class="column-side-2">1,2,3,4</td>
+                    <td class="column-side"><span>8</span></td>
+                </tr>
+                <tr>
+                    <td class="column-side-2">1,2,3,4</td>
+                    <td class="column-side"><span>9</span></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

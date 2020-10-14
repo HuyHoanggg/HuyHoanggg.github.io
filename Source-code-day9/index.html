@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table,td, th{
+            border: 1px solid gray;
+            border-collapse: collapse;
+        }
+
+        td{
+            padding: 5px;
+            width: 200px;
+        }
+
+        caption{
+            caption-side: bottom;
+        }
+
+        tr:nth-last-child(odd){
+            background-color: gray;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <caption>Danh sách lớp</caption>
+        <tr>
+            <th>Ho ten</th>
+            <th>Nam sinh</th>
+            <th>Que quan</th>
+            <th>Ghi chu</th>
+        </tr>
+        <tr>
+            <td>Huy Hoang</td>
+            <td>1995</td>
+            <td>Ha Noi</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Thuy Linh</td>
+            <td>1996</td>
+            <td>Ha Noi</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Nguyen Chanh</td>
+            <td colspan="2">Khong co thong tin</td> <!--Colspan là thẻ dùng để merge các ô ở các cột cạnh nhau lại-->
+            <td></td>
+        </tr>
+        <tr>
+            <td>Nguyen Binh</td>
+            <td rowspan="2" colspan="2"> Khong co thong tin</td> <!--rowspan là thẻ dùng để merge các ô ở các hàng cạnh nhau lại-->
+            <td></td>
+        </tr>
+        <tr>
+            <td>Nguyen Binh</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Nhung</td>
+            <td>1996</td>
+            <td>Vinh Phuc</td>
+            <td rowspan="2" colspan="2"></td>
+        </tr>
+        <tr>
+            <td>Nhung</td>
+            <td>1997</td>
+            <td>Ha Noi</td>
+        </tr>
+    </table>
+    <br/>
+</body>
+</html>
