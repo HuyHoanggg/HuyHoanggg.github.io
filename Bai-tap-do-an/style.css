@@ -1,6 +1,7 @@
 *{
     margin: 0;
     font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    scroll-behavior: smooth;
 }
 
 *::selection{
@@ -43,6 +44,14 @@
     text-decoration: none;
     color: #555555;
     font-weight: bold;
+    transition: 0.5s ease;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.list-menu>li>a:hover{
+    background-color: #3C5E2C;
+    color: #fff;
 }
 
 .banner>img{
@@ -130,7 +139,7 @@ h2{
 }
 
 .product>h3{
-    font-size: 25px;
+    font-size: 23px;
     margin-top: 20px;
 }
 
@@ -143,6 +152,7 @@ h2{
 .list-product{
     width: 22%;
     padding: 14px;
+    cursor: pointer;
 }
 
 .list-product:hover img{
@@ -272,6 +282,37 @@ h2{
 .job-apply>a{
     color: #ffffff;
     font-size: 13px;
+}
+
+.stores{
+    padding: 40px 250px 40px 250px;
+}
+
+.stores>img{
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.city{
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    margin-left: 50px
+}
+
+.store-hanoi>h3, .store-hcm>h3{
+    font-size: 21px;
+    color: #3C5E2C;
+    margin-bottom: 10px;
+}
+
+.store-hcm>p, .store-hanoi>p{
+    line-height: 2;
+    color: #555;
+}
+
+.store-hanoi, .store-hcm{
+    width: 48%;
 }
 
 .contact{
