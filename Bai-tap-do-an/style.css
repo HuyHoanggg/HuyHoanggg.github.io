@@ -108,7 +108,6 @@ h2{
 .sample-image>img{
     width: 450px;
     transition: all 0.5s;
-    object-fit: cover;
 }
 
 .sample:hover img{
@@ -126,6 +125,48 @@ h2{
     color: #232323;
 }
 
+.product{
+    padding: 40px 250px 40px 250px;
+}
+
+.product>h3{
+    font-size: 25px;
+    margin-top: 20px;
+}
+
+.menu-list{
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.list-product{
+    width: 22%;
+    padding: 14px;
+}
+
+.list-product:hover img{
+    opacity: 0.5;
+}
+
+.list-product>img{
+    width: 100%;
+    border: 1px solid black;
+    margin-bottom: 10px;
+}
+
+.list-product>p{
+    font-size: 17px;
+    font-weight: bold;
+    color: #3C5E2C;
+}
+
+.list-product>h4{
+    font-size: 20px;
+    color: #504d4d;
+    margin-bottom: 10px;
+}
+
 .recruit{
     padding: 40px 250px 40px 250px;
 }
@@ -138,7 +179,7 @@ h2{
     padding: 40px 150px;
 }
 
-.recruit-text>h3, .recruit>h3{
+.recruit-text>h3, .recruit>h3, .recruit-content>h3{
     font-size: 25px;
     text-transform: uppercase;
     text-align: center;
@@ -165,9 +206,72 @@ h2{
     margin-right: 10px;
 }
 
+.message-3>h4{
+    font-size: 20px;
+    color: #333333;
+    margin-bottom: 10px;
+}
+
 .message-3>img{
     width: 100%;
     margin-bottom: 20px;
+}
+
+.recruit-content{
+    width: 100%;
+    margin-top: 100px;
+}
+
+.jobs{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: 10px 0px;
+}
+
+.jobs:hover{
+    background-color: #F5F5F5;
+    border-radius: 10px;
+}
+
+.jobs a{
+    text-decoration: none;
+}
+
+.job-name{
+    width: 55%;
+    padding-left: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.job-name>a{
+    color: #333333;
+    font-weight: bold;
+}
+
+.job-desc{
+    width: 30%;
+    color: #555555;
+    display: flex;
+    align-items: center;
+}
+
+.job-apply{
+    width: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #3C5E2C;
+    border-radius: 40px;
+    margin-left: 20px;
+}
+
+.job-apply>a{
+    color: #ffffff;
+    font-size: 13px;
 }
 
 .contact{
