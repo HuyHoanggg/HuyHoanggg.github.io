@@ -61,7 +61,7 @@
 }
 
 .cong-story{
-    padding: 40px 250px 40px 250px;
+    padding: 40px 250px 30px 250px;
     float: left;
 }
 
@@ -136,6 +136,7 @@ h1{
 
 .product{
     padding: 40px 230px 40px 230px;
+    border-top: 1px solid #3C5E2C;
 }
 
 .product>h3{
@@ -180,6 +181,7 @@ h1{
 
 .recruit{
     padding: 40px 220px 40px 220px;
+    border-top: 1px solid #3C5E2C;
 }
 
 .recruit>img{
@@ -295,6 +297,7 @@ h1{
 
 .stores{
     padding: 40px 250px 40px 250px;
+    border-top: 1px solid #3C5E2C;
 }
 
 .stores>img{
@@ -318,6 +321,7 @@ h1{
 .store-hcm>p, .store-hanoi>p{
     line-height: 2;
     color: #555;
+    font-size: 14px;
 }
 
 .store-hanoi, .store-hcm{
@@ -327,6 +331,7 @@ h1{
 .contact{
     padding: 40px 250px 40px 250px;
     text-align: center;
+    border-top: 1px solid #3C5E2C;
 }
 
 .contact>img{
