@@ -37,7 +37,7 @@
 
 .list-menu>li{
     width: 200px;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 .list-menu>li>a{
@@ -65,9 +65,9 @@
     float: left;
 }
 
-h2{
+h1{
     color: #232323;
-    font-size: 35px;   
+    font-size: 30px;   
     padding-bottom: 40px;
     text-align: center;
 }
@@ -80,7 +80,7 @@ h2{
 .story{
     text-align: justify;
     line-height: 2;
-    font-size: 18px;
+    font-size: 16px;
 }
 
 .story>p{
@@ -93,7 +93,7 @@ h2{
 }
 
 .bang-tin{
-    padding: 40px 250px 40px 250px;
+    padding: 40px 220px 40px 220px;
 }
 
 .news{
@@ -104,9 +104,9 @@ h2{
 
 .sample{
     width: 42%;
-    padding: 35px;
-    margin-right: 5px;
+    padding: 30px;
     align-items: center;
+    margin-left: 7px;
 }
 
 .sample-image{
@@ -124,7 +124,7 @@ h2{
 }
 
 .sample-content>p{
-    font-size: 14px;
+    font-size: 13px;
     margin-bottom: 15px;
     padding-top: 5px;
 }
@@ -135,11 +135,11 @@ h2{
 }
 
 .product{
-    padding: 40px 250px 40px 250px;
+    padding: 40px 230px 40px 230px;
 }
 
 .product>h3{
-    font-size: 23px;
+    font-size: 22px;
     margin-top: 20px;
 }
 
@@ -147,11 +147,12 @@ h2{
     width: 100%;
     display: flex;
     flex-flow: row wrap;
+    margin-left: 15px;
 }
 
 .list-product{
     width: 22%;
-    padding: 14px;
+    padding: 10px;
     cursor: pointer;
 }
 
@@ -166,22 +167,23 @@ h2{
 }
 
 .list-product>p{
-    font-size: 17px;
+    font-size: 16px;
     font-weight: bold;
     color: #3C5E2C;
 }
 
 .list-product>h4{
-    font-size: 20px;
+    font-size: 18px;
     color: #504d4d;
     margin-bottom: 10px;
 }
 
 .recruit{
-    padding: 40px 250px 40px 250px;
+    padding: 40px 220px 40px 220px;
 }
 
 .recruit>img{
+    margin-top: 10px;
     width: 100%;
 }
 
@@ -190,7 +192,7 @@ h2{
 }
 
 .recruit-text>h3, .recruit>h3, .recruit-content>h3{
-    font-size: 25px;
+    font-size: 22px;
     text-transform: uppercase;
     text-align: center;
     color: #555555;
@@ -214,6 +216,7 @@ h2{
     float: left;
     margin-left:20px;
     margin-right: 10px;
+    text-align: justify;
 }
 
 .message-3>h4{
@@ -267,6 +270,7 @@ h2{
     color: #555555;
     display: flex;
     align-items: center;
+    font-size: 13px;
 }
 
 .job-apply{
@@ -321,6 +325,7 @@ h2{
 }
 
 .contact>img{
+    width: 100%;
     margin-bottom: 30px;
 }
 
