@@ -360,6 +360,34 @@ h1{
     margin-bottom: 5px;
 }
 
+.author{
+    padding: 25px 200px 25px 250px;
+    border-top: 1px solid #3C5E2C;
+}
+
+.info{
+    display: flex;
+}
+
+.author-image, .author-info{
+    width: 50%;
+}
+
+.author-image>img{
+    width: 80%;
+    margin-left: 40px;
+}
+
+.author-info{
+    line-height: 2.5;
+    margin-left: 20px;
+}
+
+.author-info>h3{
+    font-size: 20px;
+    color: #3C5E2C;
+}
+
 .connect{
     padding: 25px 250px 25px 300px;
     border-top: 1px solid #3C5E2C;
@@ -388,7 +416,11 @@ h1{
     color: #3C5E2C;
 }
 
-.leave-message>input{
+.leave-message{
+    margin-left: 100px;
+}
+
+.leave-message>form>input{
     height: 26px;
     width: 200px;
     font-size: 12px;
@@ -397,7 +429,7 @@ h1{
     outline: none;
 }
 
-.leave-message>button{
+.leave-message>form>button{
     background-color: #3c5e2c;
     border: none;
     color: #fff;
