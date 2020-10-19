@@ -345,6 +345,65 @@ h2{
     margin-bottom: 5px;
 }
 
+.connect{
+    padding: 25px 250px 25px 300px;
+    border-top: 1px solid #3C5E2C;
+    display: flex;
+}
+
+.connect-fb, .leave-message{
+    width: 45%;
+    line-height: 1.5;
+}
+
+.connect-fb>h5, .leave-message>h5{
+    color: #3C5E2C;
+    font-size: 16px;
+}
+
+.connect-fb>a{
+    padding-left: 6px;
+    display: inline;
+    font-size: 25px;
+    color: #939da3;
+    font-weight: bold;
+}
+
+.connect-fb>a:hover{
+    color: #3C5E2C;
+}
+
+.leave-message>input{
+    height: 26px;
+    width: 200px;
+    font-size: 12px;
+    padding-left: 10px;
+    border: 1px solid #ced4da;
+    outline: none;
+}
+
+.leave-message>button{
+    background-color: #3c5e2c;
+    border: none;
+    color: #fff;
+    width: 100px;
+    line-height: 28px;
+    font-size: 15px;
+    margin-left: -9px;
+    outline: none;
+    cursor: pointer;
+}
+
+.leave-message>p{
+    color: #232323;
+    font-size: 13px;
+}
+
+.leave-message>span{
+    color: #939da3;
+    font-size: 12px;
+}
+
 footer{
     font-size: 12px;
     border-top: 1px solid #232323;
