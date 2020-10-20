@@ -20,6 +20,7 @@
     position: fixed;
     background-color: #ffffff;
     opacity: 0.9;
+    z-index: 10;
 }
 
 .logo img{
@@ -46,7 +47,7 @@
     font-weight: bold;
     transition: 0.5s ease;
     padding: 15px;
-    border-radius: 20px;
+    border-radius: 5px;
 }
 
 .list-menu>li>a:hover{
@@ -70,6 +71,11 @@ h1{
     font-size: 30px;   
     padding-bottom: 40px;
     text-align: center;
+}
+
+.text-image>span{
+    color: #fff;
+    font-size: 20px;
 }
 
 .cong-story-image>img{
