@@ -74,4 +74,3 @@ function square(a,b,c){
 
 document.writeln('Tinh bình phương của một tổng (3a+2b-c)');
 document.writeln
-function
