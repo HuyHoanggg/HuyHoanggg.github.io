@@ -27,9 +27,9 @@ function minMax(numbers){
 }
 
 function oddEven(x){
-    let soChan;
-    let soLe;
-    soChan = x.filter(number => (number % 2) == 0 );
-    soLe = x.filter(number => (number % 2) != 0 );
-    return ("Số Lẻ đầu tiên là " + soLe[0] + " và số Chẵn cuối cùng là " + soChan[soChan.length-1]);
+    let even;
+    let odd;
+    even = x.filter(number => (number % 2) == 0 );
+    odd = x.filter(number => (number % 2) != 0 );
+    return ("Số Lẻ đầu tiên là " + odd[0] + " và số Chẵn cuối cùng là " + even[even.length-1]);
 }
