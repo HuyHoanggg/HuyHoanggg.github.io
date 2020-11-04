@@ -1,3 +1,14 @@
+document.write("1. Viết hàm kiểm tra 2 số, trả về số lớn hơn. Câu lệnh gọi hàm: maxNumber(a,b) <br/>");
+document.write("2. Viết hàm tính n! (giai thừa) với n là số nguyên dương. Câu lệnh gọi hàm: giaiThua(a)<br/>");
+document.write("3. Viết hàm lấy ra một mảng các số chẵn từ mảng ban đầu và trả về mảng đã được sắp xếp giảm dần. Câu lệnh gọi hàm: sortArr(c)<br/>");
+document.write("4. Viết hàm lấy ra ngày tháng năm hiện tại, xác định đang là mùa nào trong năm. Câu lệnh gọi hàm: getSeason() <br/>");
+document.write("5. Cho một mảng các chuỗi, viết hàm sắp xếp mảng theo thứ thự bảng chữ cái. Câu lệnh gọi hàm: alphabet(string) <br/>");
+document.write("6. Viết hàm đảo ngược một chuỗi từ một chuỗi cho trước. Câu lệnh gọi hàm: reverse(oldString) <br/>");
+document.write("7. Cho một số nguyên dương N, viết hàm kiểm tra N có phải là số nguyên tố. Câu lệnh gọi hàm: checkNumber(number) <br/>");
+document.write("8. Cho một số nguyên dương N, viết hàm in ra màn hình những số hoàn hảo nhỏ hơn N. Câu lệnh gọi hàm: perfectNumber(n) <br/>");
+document.write("9. Viết chương trình vẽ một hình chữ nhật bằng các dấu * với chiều rộng và chiều cao cho trước. Câu lệnh gọi hàm: rectangle(a,b) <br/>");
+document.write("10. Viết chương trình vẽ một tam giác cân bằng các dấu * với chiều cao cho trước (chiều cao lớn hơn 1). Câu lệnh gọi hàm: triangle(a)<br/>");
+
 //1. Viết hàm kiểm tra 2 số, trả về số lớn hơn.
 
 function maxNumber(a, b) {
@@ -140,8 +151,8 @@ function rectangle(a,b){
 //10. Viết chương trình vẽ một tam giác cân bằng các dấu * với chiều cao cho trước (chiều cao lớn hơn 1).
 
 function triangle(a){
-    if (a<=0){
-        return `Chiều cao tam giác phải lớn hơn 0`;
+    if (a<=1){
+        return `Chiều cao tam giác phải lớn hơn 1`;
     }else{
         for(var i=1; i<=a; i++){
             for(var j=1; j<=a+1-i; j++){
