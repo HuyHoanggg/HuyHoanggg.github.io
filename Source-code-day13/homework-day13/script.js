@@ -124,10 +124,10 @@ function perfectNumber(n){
             for(j=2; j<=i/2; j++){
                 if(i%j==0){
                     sum += j;
-                    if(sum == i){
-                        return `Số hoàn hảo trong khoảng từ 1 đến ${n} là ${i}`
-                    }
                 }
+            }
+            if(sum == i){
+                console.log (i);
             }
         }
     }

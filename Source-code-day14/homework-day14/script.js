@@ -1,10 +1,21 @@
+document.write("1. Đếm số nguyên tố trong đoạn [a, b].<br/>");
+document.write("2. Hiển thị số ngày của tháng. Với tháng 2 có 29 ngày nếu là năm nhuận, 28 ngày nếu là năm không nhuận. Câu lệnh gọi hàm: dayCheck(month,year)<br/>");
+document.write("4. Chèn phần tử có giá trị X vào phía sau phần tử có giá trị lớn nhất trong mảng.<br/>");
+document.write("5. Chèn phần tử có giá trị X vào mảng sao cho mảng vẫn có thứ tự tăng dần.<br/>");
+document.write("6. Tính tổng các chữ số trong 1 số nguyên dương. Câu lệnh gọi hàm: sumNumber(number) <br/>");
+document.write("7. Kiểm tra tính đối xứng của một số nguyên.<br/>");
+document.write("8. Giải phương trình bậc 2: ax^2 + bx + c = 0. Câu lệnh gọi hàm: ptBacHai(a,b,c)<br/>");
+document.write("9. Vẽ hình chữ nhật rỗng kích thước m, n. Câu lệnh gọi hàm: retangle(m,n) <br/>");
+document.write("10.  Vẽ tam giác vuông chiều cao h. Câu lệnh gọi hàm: triangle(h)<br/>");
+document.write("11. Vẽ tam giác cân ngược. Câu lệnh gọi hàm: tamGiacNguoc(h)<br/>");
+
 //1. Đếm số nguyên tố trong đoạn [a, b].
 
-function countNumber(a,b){
-    for( var i=a; a<=i<=b; i++){
-        if()
-    }
-}
+// function countNumber(a,b){
+//     for( var i=a; a<=i<=b; i++){
+//         if()
+//     }
+// }
 
 //2. Hiển thị số ngày của tháng. Với tháng 2 có 29 ngày nếu là năm nhuận, 28 ngày nếu là năm không nhuận.
 
@@ -45,13 +56,14 @@ function dayCheck(month,year){
 
 //4. Chèn phần tử có giá trị X vào phía sau phần tử có giá trị lớn nhất trong mảng.
 
-function maxNumber()
+// function maxNumber()
 
 //5. Chèn phần tử có giá trị X vào mảng sao cho mảng vẫn có thứ tự tăng dần.
 
-function sortNumber(arr){
-
-    return even.sort(function (a, b) { return b - a });
+function sortNumber(x){
+    var arr = [-4,3,7,15,22,59,72,89,231,1241]
+    var newArr = arr.push(x);
+    return newArr.sort(function (a, b) { return a - b });
 }
 
 //6. Tính tổng các chữ số trong 1 số nguyên dương.
@@ -120,15 +132,18 @@ function triangle(h){
 //11. Vẽ tam giác cân ngược
 
 function tamGiacNguoc(h){
-    if(h<=0){
-        return `Chiều cao tam giác phải lớn hơn 0!`;
+    if(h<=1){
+        return `Chiều cao tam giác phải lớn hơn 1!`;
     }else{
         for(var i=1; i<=h; i++){
-            for(var j=1; j<=h+1-i;j--){
-                document.write("&ensp;");
-            }
-            for(var j=i; j<=2*i-1; j--){
-                document.write("*");
+            for(var j=1; j<=2*h-1; j++){
+                if(i==1){
+                    document.write("*");
+                }else if((j<i) || (j>2*h-i)){
+                    document.write("&ensp;");
+                }else{
+                    document.write("*");
+                }
             }
             document.write("<br/>");
         }
