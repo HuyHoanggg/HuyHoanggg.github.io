@@ -4,7 +4,7 @@ document.write("3. Viết hàm lấy ra một mảng các số chẵn từ mản
 document.write("4. Viết hàm lấy ra ngày tháng năm hiện tại, xác định đang là mùa nào trong năm. Câu lệnh gọi hàm: getSeason() <br/>");
 document.write("5. Cho một mảng các chuỗi, viết hàm sắp xếp mảng theo thứ thự bảng chữ cái. Câu lệnh gọi hàm: alphabet(string) <br/>");
 document.write("6. Viết hàm đảo ngược một chuỗi từ một chuỗi cho trước. Câu lệnh gọi hàm: reverse(oldString) <br/>");
-document.write("7. Cho một số nguyên dương N, viết hàm kiểm tra N có phải là số nguyên tố. Câu lệnh gọi hàm: checkNumber(number) <br/>");
+document.write("7. Cho một số nguyên dương N, viết hàm kiểm tra N có phải là số nguyên tố. Câu lệnh gọi hàm: kiemtrasnt(n) <br/>");
 document.write("8. Cho một số nguyên dương N, viết hàm in ra màn hình những số hoàn hảo nhỏ hơn N. Câu lệnh gọi hàm: perfectNumber(n) <br/>");
 document.write("9. Viết chương trình vẽ một hình chữ nhật bằng các dấu * với chiều rộng và chiều cao cho trước. Câu lệnh gọi hàm: rectangle(a,b) <br/>");
 document.write("10. Viết chương trình vẽ một tam giác cân bằng các dấu * với chiều cao cho trước (chiều cao lớn hơn 1). Câu lệnh gọi hàm: triangle(a)<br/>");
@@ -37,9 +37,23 @@ function giaiThua(a) {
 
 //3. Viết hàm lấy ra một mảng các số chẵn từ mảng ban đầu và trả về mảng đã được sắp xếp giảm dần.
 
-function sortArr(c) {
-    let even = c.filter(x => (x % 2) == 0);
-    return even.sort(function (a, b) { return b - a });
+// function sortArr(c) {
+//     let even = c.filter(x => (x % 2) == 0);
+//     return even.sort(function (a, b) { return b - a });
+// }
+
+function sortArr(c){
+    let evenNumber = c.filter((number)=> number%2 == 0);
+    let soChan = evenNumber[0];
+    for (let i = 0; i < evenNumber.length-1; i++){
+        for (let j = i+ 1; j < evenNumber.length; j++){
+            if (evenNumber[i] < evenNumber[j]){
+                soChan = evenNumber[j];
+                evenNumber[j] = evenNumber[i];
+                evenNumber[i] = soChan;
+            }
+        }
+    } return evenNumber;
 }
 
 // 4. Viết hàm lấy ra ngày tháng năm hiện tại, xác định đang là mùa nào trong năm. Biết rằng:
@@ -57,24 +71,24 @@ function getSeason() {
         case 0:
         case 1:
         case 2:
-            season = "Spring";
+            season = "Xuân";
             break;
         case 3:
         case 4:
         case 5:
-            season = "Summer";
+            season = "Hạ";
             break;
         case 6:
         case 7:
         case 8:
-            season = "Autumn";
+            season = "Thu";
             break;
         case 9:
         case 10:
         case 11:
-            season = "Winter"
+            season = "Đông"
     }
-    return season;
+    return `hôm nay là ngày ${new Date().getDate()}/${new Date().getMonth()+1}/${new Date().getFullYear()}  và đang là mùa ${season}`
 }
 
 //5. Cho một mảng các chuỗi, viết hàm sắp xếp mảng theo thứ thự bảng chữ cái.
@@ -96,19 +110,49 @@ function reverse(oldString) {
 
 //7. Cho một số nguyên dương N, viết hàm kiểm tra N có phải là số nguyên tố.
 
-function checkNumber(number) {
-    if (number < 2) {
-        return `${number} không phải là số nguyên tố`;
-    }else if (number == 2){
-        return `${number} là số nguyên tố`
-    }else {
-        for (var i = 2; i <= number/2; i++) {
-            if (number % i == 0) {
-                return `${number} không phải là số nguyên tố`
-            }else{
-                return `${number} là số nguyên tố`
-            } 
+// function checkNumber(n) {
+//     if (n < 2) {
+//         return `${n} không phải là số nguyên tố`;
+//     }else if (n == 2||n == 3){
+//         return `${n} là số nguyên tố`
+//     }else {
+//         for (var i = 2; i <= (n/2); i++) {
+//             if (n % i == 0) {
+//                 // console.log (`${n} không phải là số nguyên tố`);
+//                 return false;
+//             }else{
+//                 console.log (`${n} là số nguyên tố`);
+//             } 
+//         }
+//     }
+// }
+
+function kiemtrasnt(n)
+{   
+    var flag = false;
+    if (n < 2 ){
+        flag = false;
+    }
+    else if (n == 2 || n == 3){
+        flag = true;
+    }
+    else{
+        
+        for (var i = 2; i <= (n /2); i++)
+        {
+            if (n % i == 0){
+                flag = false;
+                break;
+            }
+            else {flag = true}
         }
+    }
+    if (flag == true){
+        return n + " là số nguyên tố";
+       
+    }
+    else{
+        return n + " không phải là số nguyên tố ";
     }
 }
 
@@ -116,6 +160,7 @@ function checkNumber(number) {
 //8. Cho một số nguyên dương N, viết hàm in ra màn hình những số hoàn hảo nhỏ hơn N (số hoàn hảo là số bằng tổng các ước số của nó mà không kể chính nó).
 
 function perfectNumber(n){
+    let list = [];
     if (n<=0){
         return `Vui lòng nhập số nguyên dương`;
     }else{
@@ -127,10 +172,11 @@ function perfectNumber(n){
                 }
             }
             if(sum == i){
-                console.log (i);
+                list.push(i);
             }
         }
     }
+    return list;
 }
 
 //9. Viết chương trình vẽ một hình chữ nhật bằng các dấu * với chiều rộng và chiều cao cho trước (chiều rộng, chiều cao lớn hơn 1).
@@ -165,3 +211,33 @@ function triangle(a){
         }
     }
 }
+
+// function triangle(h){
+//     y = 2*h-1;
+//     for (let i=0; i<h;i++){
+//         for (let j=0; j<y;j++){
+//             if(i<=j && j >= y-i-1){
+//                 document.write("*");
+//             }else{
+//                 document.write("&nbsp;");
+//             }
+//         }
+//         document.write("<br/>");
+//     }
+// }
+
+// function tamGiacCan(h) {
+//     var str = "";
+//     for (let i = 0; i < h; i++) {
+//       for (let j = 0; j < 2 * h-1; j++) {
+//         if (j >= h - 1 - i && j <= h - 1 + i) {
+//           str += "*";
+//         } else {
+//           str += "0";
+//         }
+//       }
+//       str += "<br />";
+//     }
+  
+//     document.writeln(str);
+//   }
