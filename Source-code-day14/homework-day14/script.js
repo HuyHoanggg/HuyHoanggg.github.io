@@ -1,21 +1,40 @@
-document.write("1. Đếm số nguyên tố trong đoạn [a, b].<br/>");
+document.write("1. Đếm số nguyên tố trong đoạn [a, b]. Câu lệnh gọi hàm: countSoNT(a,b)<br/>");
 document.write("2. Hiển thị số ngày của tháng. Với tháng 2 có 29 ngày nếu là năm nhuận, 28 ngày nếu là năm không nhuận. Câu lệnh gọi hàm: dayCheck(month,year)<br/>");
-document.write("4. Chèn phần tử có giá trị X vào phía sau phần tử có giá trị lớn nhất trong mảng.<br/>");
-document.write("5. Chèn phần tử có giá trị X vào mảng sao cho mảng vẫn có thứ tự tăng dần.<br/>");
+document.write("4. Chèn phần tử có giá trị X vào phía sau phần tử có giá trị lớn nhất trong mảng. Câu lệnh gọi hàm: importNumber(arr, x)<br/>");
+document.write("5. Chèn phần tử có giá trị X vào mảng sao cho mảng vẫn có thứ tự tăng dần. Câu lệnh gọi hàm: sortArr(arr, x)<br/>");
 document.write("6. Tính tổng các chữ số trong 1 số nguyên dương. Câu lệnh gọi hàm: sumNumber(number) <br/>");
-document.write("7. Kiểm tra tính đối xứng của một số nguyên.<br/>");
+document.write("7. Kiểm tra tính đối xứng của một số nguyên. Câu lệnh gọi hàm: checkDoiXung(a)<br/>");
 document.write("8. Giải phương trình bậc 2: ax^2 + bx + c = 0. Câu lệnh gọi hàm: ptBacHai(a,b,c)<br/>");
 document.write("9. Vẽ hình chữ nhật rỗng kích thước m, n. Câu lệnh gọi hàm: retangle(m,n) <br/>");
 document.write("10.  Vẽ tam giác vuông chiều cao h. Câu lệnh gọi hàm: triangle(h)<br/>");
 document.write("11. Vẽ tam giác cân ngược. Câu lệnh gọi hàm: tamGiacNguoc(h)<br/>");
+document.write("12. Viết chương trình vẽ một chữ X bằng các dấu * với chiều cao nhập từ bàn phím. Câu lệnh gọi hàm: drawX(h)")
 
 //1. Đếm số nguyên tố trong đoạn [a, b].
 
-// function countNumber(a,b){
-//     for( var i=a; a<=i<=b; i++){
-//         if()
-//     }
-// }
+function checkSoNT(number){
+    if(number < 2){
+        return false;
+    } 
+    for(let i = 2; i <= Math.sqrt(number); i++){
+        if(number % i == 0){
+            return false;
+        } 
+    }
+    return true;
+}
+
+function countSoNT(a,b) {
+    let count = 0;
+    let list = [];
+    for (let i = a; i <= b; i++) {
+        if(checkSoNT(i)){
+            count++;
+            list.push(i);
+        }
+    }
+    return list;
+}
 
 //2. Hiển thị số ngày của tháng. Với tháng 2 có 29 ngày nếu là năm nhuận, 28 ngày nếu là năm không nhuận.
 
@@ -24,7 +43,7 @@ function dayCheck(month,year){
         return `Vui lòng nhập số nguyên dương!`
     }else{
         function yearCheck(year){
-        if ((year%4==0 && year % 100 !=0 || year % 400 == 0)){
+        if (((year%4)==0 && (year % 100) !=0) || (year % 400) == 0){
             return true;
         }else{
             return false;
@@ -56,14 +75,35 @@ function dayCheck(month,year){
 
 //4. Chèn phần tử có giá trị X vào phía sau phần tử có giá trị lớn nhất trong mảng.
 
-// function maxNumber()
+function importNumber(arr,x){
+    let max = [0];
+    // find max
+    for(let i = 0; i <= arr.length; i++){
+        if(max < arr[i]){
+            max = arr[i];
+        }
+    }
+    // get index of element in array
+    let index = arr.indexOf(max);
+    // push x
+    arr.splice(index + 1 , 0, x);
+    return arr;
+}
 
 //5. Chèn phần tử có giá trị X vào mảng sao cho mảng vẫn có thứ tự tăng dần.
 
-function sortNumber(x){
-    var arr = [-4,3,7,15,22,59,72,89,231,1241]
-    var newArr = arr.push(x);
-    return newArr.sort(function (a, b) { return a - b });
+function sortArr(arr,x){
+    arr.push(x);
+    for(let i = 0; i <= arr.length; i++){
+        for(let j = 0; j <= arr.length; j++){
+            if(arr[j] > arr[j + 1]){
+                let temp = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = temp;
+            }
+        }
+    }
+    console.log(arr);
 }
 
 //6. Tính tổng các chữ số trong 1 số nguyên dương.
@@ -76,6 +116,24 @@ function sumNumber(number){
         number /= 10;
     }
     return `${sum}`;
+}
+
+//7. Kiểm tra tính đối xứng của một số nguyên.
+
+function checkDoiXung(a){
+    let reverse = 0;
+    let rem;
+    let temp = a;
+    while(temp != 0){
+        rem = Math.floor(temp % 10);
+        reverse = Math.floor((reverse * 10) + rem);
+        temp = Math.floor(temp/10);
+    }
+    if(reverse == a){
+        return `${a} là số đối xứng`;
+    }else{
+        return `${a} không phải là số đối xứng`;
+    }
 }
 
 //8. Giải phương trình bậc 2: ax^2 + bx + c = 0.
@@ -146,6 +204,27 @@ function tamGiacNguoc(h){
                 }
             }
             document.write("<br/>");
+        }
+    }
+}
+
+//12. Viết chương trình vẽ một chữ X bằng các dấu * với chiều cao nhập từ bàn phím (chiều cao lớn hơn 0 và là số lẻ)
+
+function drawX(h){
+    if(h<=0){
+        return `Chiều cao phải lớn hơn 0!`;
+    }else if(h%2==0){
+        return `Chiều cao phải là số lẻ`;
+    }else{
+        for(let i=1; i<=h; i++){
+            for(let j=1;j<=h;j++){
+                if(j==i || j==h+1-i){
+                    document.write("*");
+                }else{
+                    document.write("&ensp;");
+                }
+            }
+            document.writeln("<br/>");
         }
     }
 }
