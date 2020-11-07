@@ -120,21 +120,7 @@ function sumNumber(number){
 
 //7. Kiểm tra tính đối xứng của một số nguyên.
 
-function checkDoiXung(a){
-    let reverse = 0;
-    let rem;
-    let temp = a;
-    while(temp != 0){
-        rem = Math.floor(temp % 10);
-        reverse = Math.floor((reverse * 10) + rem);
-        temp = Math.floor(temp/10);
-    }
-    if(reverse == a){
-        return `${a} là số đối xứng`;
-    }else{
-        return `${a} không phải là số đối xứng`;
-    }
-}
+
 
 //8. Giải phương trình bậc 2: ax^2 + bx + c = 0.
 
