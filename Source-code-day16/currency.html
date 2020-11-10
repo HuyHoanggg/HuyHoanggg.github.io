@@ -15,6 +15,8 @@
         <input type="radio" name="tien" id="eur" value="euro"><br/>
         <input type="text" name="vnd" id="vnd">
         <input type="button" value="Convert" onclick="currency()">
+        <br/>
+        <p id="show"></p>
         
     </form>
     <script>
@@ -23,9 +25,9 @@
             let usd = document.getElementById("usd").checked;
             let eur = document.getElementById("eur").checked;
             if (usd == true){
-                alert (money*23176.50);
+                document.getElementById("show").innerHTML = money*23176.50 + "VND";
             }else if(eur == true){
-                alert (money*27517.46);
+                document.getElementById("show").innerHTML = money*27517.46 + "VND";
             }
         }
 
