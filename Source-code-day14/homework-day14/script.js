@@ -77,15 +77,12 @@ function dayCheck(month,year){
 
 function importNumber(arr,x){
     let max = [0];
-    // find max
     for(let i = 0; i <= arr.length; i++){
         if(max < arr[i]){
             max = arr[i];
         }
     }
-    // get index of element in array
     let index = arr.indexOf(max);
-    // push x
     arr.splice(index + 1 , 0, x);
     return arr;
 }
@@ -120,7 +117,21 @@ function sumNumber(number){
 
 //7. Kiểm tra tính đối xứng của một số nguyên.
 
-
+function checkDoiXung(nbr){
+    let reverse = 0
+    let rem
+    let temp = nbr
+    while(temp != 0){
+        rem = Math.floor(temp % 10)
+        reverse = Math.floor((reverse * 10) + rem)
+        temp = Math.floor(temp/10)
+    }
+    if(reverse == nbr){
+        return `${nbr} Là số đối xứng`
+    }else{
+        return `${nbr} Không là số đối xứng`
+    }
+}
 
 //8. Giải phương trình bậc 2: ax^2 + bx + c = 0.
 
