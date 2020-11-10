@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đoán số</title>
+</head>
+<body>
+    <input id="guess-number" name="number" placeholder="Chọn 1 số từ 1 đến 100" type="text">
+    <button id="check" onclick="check()">Kiểm tra</button>
+    <script>
+        let randomNumber = Math.floor(Math.random()*100)+1;
+        function check(){
+            let guessNumber = document.getElementById("guess-number").value;
+            if (guessNumber==""){
+                alert("Bạn chưa nhập giá trị");
+                return;
+            }
+
+            if(isNaN(guessNumber) == true){
+                alert("Nhập vào 1 số");
+                return;
+            }
+
+            if(guessNumber<1 || guessNumber>100){
+                alert("Nhập 1 số trong khoảng 1 đến 100");
+                return;
+            }
+
+            if(guessNumber > randomNumber){
+                alert(`Số cần tìm nhỏ hơn ${guessNumber}`)
+            }
+
+            else if(guessNumber < randomNumber){
+                alert(`Số cần tìm lớn hơn ${guessNumber}`);
+            }
+            else{
+                alert("check ok" + guessNumber);
+            }
+        }
+    </script>
+</body>
+</html>

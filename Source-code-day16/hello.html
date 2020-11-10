@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Translate</title>
+</head>
+<body>
+    <button type="button" onclick="hello()">Xin chào</button>
+    <script>
+        function hello(){
+            let value = prompt("Bạn đến từ quốc gia nào? (Anh, Pháp, Trung Quốc, Hàn Quốc");
+            switch (value){
+                case "Anh":
+                    alert ("Hello");
+                    break;
+                case "Pháp":
+                    alert ("Bonjour");
+                    break;
+                case "Trung Quốc":
+                    alert ("你好");
+                    break;
+                case "Hàn Quốc":
+                    alert ("여보세요");
+                    break;
+                default:
+                    alert ("Xin chào");
+                    break;
+            }
+        }
+    </script>
+</body>
+</html>
