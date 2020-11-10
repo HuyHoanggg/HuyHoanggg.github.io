@@ -20,11 +20,11 @@
     <script>
         function currency(){
             let money = document.getElementById("vnd").value;
-            let usd = document.getElementById("usd").value;
-            let eur = document.getElementById("eur").value;
-            if (usd == "usd"){
+            let usd = document.getElementById("usd").checked;
+            let eur = document.getElementById("eur").checked;
+            if (usd == true){
                 alert (money*23176.50);
-            }else if(eur == "euro"){
+            }else if(eur == true){
                 alert (money*27517.46);
             }
         }
