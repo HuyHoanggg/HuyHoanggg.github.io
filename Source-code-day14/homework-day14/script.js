@@ -3,7 +3,7 @@ document.write("2. Hiển thị số ngày của tháng. Với tháng 2 có 29 n
 document.write("4. Chèn phần tử có giá trị X vào phía sau phần tử có giá trị lớn nhất trong mảng. Câu lệnh gọi hàm: importNumber(arr, x)<br/>");
 document.write("5. Chèn phần tử có giá trị X vào mảng sao cho mảng vẫn có thứ tự tăng dần. Câu lệnh gọi hàm: sortArr(arr, x)<br/>");
 document.write("6. Tính tổng các chữ số trong 1 số nguyên dương. Câu lệnh gọi hàm: sumNumber(number) <br/>");
-document.write("7. Kiểm tra tính đối xứng của một số nguyên. Câu lệnh gọi hàm: checkDoiXung(a)<br/>");
+document.write("7. Kiểm tra tính đối xứng của một số nguyên. Câu lệnh gọi hàm: soDoiXung(a)<br/>");
 document.write("8. Giải phương trình bậc 2: ax^2 + bx + c = 0. Câu lệnh gọi hàm: ptBacHai(a,b,c)<br/>");
 document.write("9. Vẽ hình chữ nhật rỗng kích thước m, n. Câu lệnh gọi hàm: retangle(m,n) <br/>");
 document.write("10.  Vẽ tam giác vuông chiều cao h. Câu lệnh gọi hàm: triangle(h)<br/>");
@@ -117,7 +117,7 @@ function sumNumber(number){
 
 //7. Kiểm tra tính đối xứng của một số nguyên.
 
-function checkDoiXung(nbr){
+function soDoiXung(nbr){
     let reverse = 0
     let rem
     let temp = nbr
