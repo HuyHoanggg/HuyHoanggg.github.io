@@ -9,24 +9,26 @@
     <h1>Currency Converter</h1>
     <p>Select input currency</p>
     <form action="">
-        <input type="radio" name="usd" id="usd" value="usd"> USD <br/>
-        <input type="radio" name="eur" id="eur" value="euro"> EUR <br/>
+        <label for="usd">USD</label>
+        <input type="radio" name="tien" id="usd" value="usd"><br/>
+        <label for="eur">EUR</label>
+        <input type="radio" name="tien" id="eur" value="euro"><br/>
         <input type="text" name="vnd" id="vnd">
-        <button type="submit" onclick="currency()">Convert</button>
-        <br/>
-        <p></p>
+        <input type="button" value="Convert" onclick="currency()">
+        
     </form>
     <script>
         function currency(){
             let money = document.getElementById("vnd").value;
-            let usd = document.getElementById("usd").checked;
-            let eur = document.getElementById("eur").checked;
+            let usd = document.getElementById("usd").value;
+            let eur = document.getElementById("eur").value;
             if (usd == "usd"){
                 alert (money*23176.50);
-            }else if(eur == "euro" ){
+            }else if(eur == "euro"){
                 alert (money*27517.46);
             }
         }
+
     </script>
 </body>
 </html>
