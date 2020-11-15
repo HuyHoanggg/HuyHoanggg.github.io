@@ -1,0 +1,16 @@
+*{
+    margin: 0 auto;
+}
+
+.content{
+    width: 70%;
+}
+
+h1{
+    text-align: center;
+    margin-top: 20px;
+}
+
+p{
+    text-align: justify;
+}
