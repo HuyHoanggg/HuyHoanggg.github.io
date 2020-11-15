@@ -81,9 +81,8 @@
 
             function increaseFontSize(paragraph){
                 let p = document.getElementById(paragraph);
-                let style = window.getComputedStyle(p);
-                let value = style.getPropertyValue("font-size");
-                currentSize = parseFloat(value);
+                let style = window.getComputedStyle(p).getPropertyValue("font-size");
+                let currentSize = parseFloat(style);
 
                 if (currentSize < 30) {
                     p.style.fontSize = currentSize + 1 + "px";
@@ -98,9 +97,8 @@
 
             function decreaseFontSize(paragraph){
                 let p = document.getElementById(paragraph);
-                let style = window.getComputedStyle(p);
-                let value = style.getPropertyValue("font-size");
-                currentSize = parseFloat(value);
+                let style = window.getComputedStyle(p).getPropertyValue("font-size");
+                let currentSize = parseFloat(style);
 
                 if (currentSize > 10) {
                     p.style.fontSize = currentSize - 1 + "px";
