@@ -5,14 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
     <div id="calculator">
         <div id="display"></div>
         <table>
             <tr>
-                <td><button class="btn" onclick="clean()">C</button></td>
-                <td><button class="btn" onclick="undo()">DEL</button></td>
+                <td colspan="4"><button class="btn" style="width: 264px" onclick="clean()">AC</button></td>
+            </tr>
+            <tr>
+                <td><button class="btn" onclick="square()">x&#178;</button></td>
+                <td><button class="btn" onclick="sqrt()">&#x221a;</button></td>
                 <td><button class="btn" value="%">%</button></td>
                 <td><button class="btn" value="*">*</button></td>
             </tr>
@@ -35,7 +39,8 @@
                 <td><button class="btn" value="-">-</button></td>
             </tr>
             <tr>
-                <td colspan="2"><button class="btn number" style="width: 126px;" value="0">0</button></td>
+                <td><button class="btn" onclick="undo()"><i style="font-size: 22px;" class="material-icons">backspace</i></button></td>
+                <td><button class="btn number" value="0">0</button></td>
                 <td><button class="btn number" value=".">.</button></td>
                 <td><button class="btn" onclick="equal()">=</button></td>
             </tr>
@@ -54,6 +59,18 @@
         
         function equal(){
             display.innerHTML =eval(display.innerHTML);
+        }
+
+        function sqrt(){
+            display.innerHTML = Math.sqrt(display.innerHTML);
+        }
+
+        function square(){
+            if(display.innerHTML == ""){
+                display.innerHTML = 0;
+            }else{
+                display.innerHTML = eval(display.innerHTML) * eval(display.innerHTML);
+            }
         }
 
         function clean(){
