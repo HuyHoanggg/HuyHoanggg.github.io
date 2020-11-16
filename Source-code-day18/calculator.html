@@ -12,7 +12,8 @@
         <div id="display"></div>
         <table>
             <tr>
-                <td colspan="4"><button class="btn" style="width: 264px" onclick="clean()">AC</button></td>
+                <td colspan="3"><button class="btn" style="width: 197px" onclick="clean()">AC</button></td>
+                <td><button class="btn" onclick="giaiThua()">x!</button></td>
             </tr>
             <tr>
                 <td><button class="btn" onclick="square()">x&#178;</button></td>
@@ -50,7 +51,6 @@
         const numbers = document.getElementsByClassName('btn');
         const display = document.getElementById("display");
 
-
         for(let number of numbers){
             number.addEventListener("click", function(){
                 display.innerHTML = display.innerHTML + this.value;
@@ -59,6 +59,20 @@
         
         function equal(){
             display.innerHTML =eval(display.innerHTML);
+        }
+
+        function giaiThua() {
+            if (display.innerHTML < 0) {
+                display.innerHTML = "Error!";
+            } else if (display.innerHTML == 0) {
+                display.innerHTML = 1;
+            } else {
+                let result = 1;
+                for (let i = 1; i <= display.innerHTML; i++) {
+                    result = result * i;
+                }
+                display.innerHTML = ketQua;
+            }
         }
 
         function sqrt(){
