@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 6</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <style>
+        *{
+            margin: 0;
+        }
+
+        .menu-bar{
+            max-width: 100%;
+            height: 60px;
+            display: flex;
+            flex-flow: wrap row;
+            padding: 10px 15px;
+        }
+
+        .logo{
+            width: 100px;
+            background-color: darkcyan;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 23px;
+            font-weight: bold;
+        }
+
+        .blank{
+            width: calc(100% - 700px);
+        }
+
+        .menu{
+            width: 600px;
+            background-color: blue;
+        }
+
+        ul{
+            list-style-type: none;
+            text-align: center;
+            margin-left: -35px;
+        }
+
+        li{
+            display: inline-block;
+            width: 200px;
+            line-height: 60px;
+            margin-left: -5px;
+            font-size: 20px;
+        }
+
+        li:hover{
+            background-color: rgb(17, 17, 138);
+            transition: 0.5s;
+            border-radius: 5px;
+        }
+
+        .icon{
+            font-size: 40px;
+            float: left;
+            display: none;
+            padding: 10px 0px 10px 20px;
+        }
+
+        .container{
+            max-width: 100%;
+            padding: 15px 15px 0px 15px;
+        }
+
+        .content{
+            width: 100%;
+            height: 600px;
+            background-color: blueviolet;
+        }
+
+        @media (max-width: 768px){
+            .blank, .logo, ul{
+                display: none;
+            }
+
+            .icon{
+                display: block;
+            }
+
+            ul.active{
+                background-color:red;
+                width: calc(100% - 70px);
+                position: absolute;
+                top:80px;
+                left: 50px;
+                display: block;
+            }
+
+            li{
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="menu-bar">
+        <div class="logo">LOGO</div>
+        <div class="blank"></div>
+        <div class="menu">
+            <ul>
+                <li>Menu 1</li>
+                <li>Menu 2</li>
+                <li>Menu 3</li>
+            </ul>
+            <div class="icon">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="content"></div>
+    </div>
+    <script>
+        let button = document.querySelector('i');
+        let mobile = document.querySelector('ul');
+        button.addEventListener('click',function(){
+            mobile.classList.toggle('active');
+        })
+    </script>
+</body>
+</html>
