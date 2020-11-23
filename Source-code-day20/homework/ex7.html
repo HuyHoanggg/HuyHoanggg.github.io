@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exercise 6</title>
+    <title>Exercise 7</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <style>
         *{
@@ -12,9 +12,9 @@
 
         .menu-bar{
             max-width: 100%;
-            height: 60px;
+            height: 40px;
+            padding: 10px 10px;
             display: flex;
-            padding: 10px 15px;
         }
 
         .logo{
@@ -23,32 +23,30 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            font-size: 23px;
+            font-size: 22px;
             font-weight: bold;
-        }
-
-        .menu{
-            width: 600px;
-            background-color: blue;
-            margin-left: auto;
         }
 
         ul{
             list-style-type: none;
             text-align: center;
-            margin-left: -35px;
+            margin-left: -40px;
         }
 
-        .home-page{
+        .menu{
+            width: 450px;
+            background-color: blue;
+            margin: auto;
+        }
+
+        .icon{
             display: none;
         }
 
         li{
             display: inline-block;
-            width: 200px;
-            line-height: 60px;
-            margin-left: -5px;
-            font-size: 20px;
+            line-height: 40px;
+            margin-left: -3px;
         }
 
         li:hover{
@@ -58,50 +56,93 @@
         }
 
         .icon{
-            font-size: 40px;
+            background-color: blue;
+            font-size: 30px;
             float: left;
             display: none;
             padding: 5px 0px 5px 20px;
         }
 
-        .container{
-            max-width: 100%;
-            padding: 15px 15px 0px 15px;
+        .menu li{
+            width: 150px;
         }
 
-        .content{
-            width: 100%;
-            height: 1000px;
-            background-color: blueviolet;
+        .sign-up{
+            width: 180px;
+            background-color: darkcyan;
+            margin-left: auto;
+        }
+
+        .sign-up li{
+            width: 90px;
+        }
+
+        .res{
+            display: none;
+        }
+
+        .container{
+            max-width: 100%;
+            padding: 10px;
+        }
+
+        .content_1{
+            width: 65%;
+            height: 600px;
+            background-color: darkcyan;
+            float: left;
+            margin-right: 20px;
+        }
+
+        .content_2{
+            width: calc(35% - 20px);
+            height: 600px;
+            background-color: darkcyan;
+            float: left;
         }
 
         @media (max-width: 768px){
-            .logo, ul{
+            .sign-up, ul{
                 display: none;
+            }
+
+            .logo{
+                height: 40px;
+                position: absolute;
+                left: 50%;
+                transform: translate(-50%);
             }
 
             .menu{
                 width: 100%;
+                margin: 0;
             }
 
-            .icon{
+            .res, .icon{
                 display: block;
+            }
+
+            .content_1{
+                width: 100%;
+                height: 300px;
+                margin-bottom: 20px;
+            }
+
+            .content_2{
+                width: 100%;
+                height: 300px;
             }
 
             ul.active{
                 background-color:cadetblue;
-                width: calc(100% - 70px);
+                width: calc(100% - 60px);
                 display: block;
                 position: absolute;
                 top:60px;
                 left: 50px;
             }
 
-            .home-page{
-                display: block;
-            }
-
-            li{
+            .menu li{
                 width: 100%;
                 display: block;
                 margin-left: -20px;
@@ -111,22 +152,32 @@
 </head>
 <body>
     <div class="menu-bar">
+        <div class="icon">
+            <i class="fas fa-bars"></i>
+        </div>
         <div class="logo">LOGO</div>
         <div class="menu">
             <ul>
-                <li class="home-page">Trang Chủ</li>
                 <li>Menu 1</li>
                 <li>Menu 2</li>
                 <li>Menu 3</li>
+                <li class="res">Login</li>
+                <li class="res">Register</li>
             </ul>
-            <div class="icon">
-                <i class="fas fa-bars"></i>
-            </div>
+            
+        </div>
+        <div class="sign-up">
+            <ul>
+                <li>Login</li>
+                <li>Register</li>
+            </ul>
         </div>
     </div>
     <div class="container">
-        <div class="content"></div>
+        <div class="content_1"></div>
+        <div class="content_2"></div>
     </div>
+    
     <script>
         let button = document.querySelector('i');
         let mobile = document.querySelector('ul');
