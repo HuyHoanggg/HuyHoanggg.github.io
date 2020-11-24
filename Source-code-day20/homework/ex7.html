@@ -8,6 +8,7 @@
     <style>
         *{
             margin: 0;
+            color: white;
         }
 
         .menu-bar{
@@ -36,7 +37,10 @@
         .menu{
             width: 450px;
             background-color: #4a72b8;
-            margin: auto;
+            position: absolute;
+            top: 10px;
+            left: 50%;
+            transform: translate(-50%);
         }
 
         .icon{
@@ -47,6 +51,7 @@
             display: inline-block;
             line-height: 40px;
             margin-left: -3px;
+            font-size: 18px;
         }
 
         li:hover{
@@ -57,10 +62,8 @@
 
         .icon{
             background-color: #4a72b8;
-            font-size: 30px;
-            float: left;
+            font-size: 22px;
             display: none;
-            padding: 5px 0px 5px 20px;
         }
 
         .menu li{
@@ -68,13 +71,14 @@
         }
 
         .sign-up{
-            width: 180px;
+            width: 120px;
             background-color: darkcyan;
             margin-left: auto;
         }
 
         .sign-up li{
-            width: 90px;
+            width: 60px;
+            font-size: 15px;
         }
 
         .res{
@@ -117,10 +121,23 @@
             .menu{
                 width: 100%;
                 margin: 0;
+                background-color: white;
             }
 
             .res, .icon{
                 display: block;
+            }
+
+            .icon{
+                display: block;
+                padding: 8px 10px 1px 10px;
+                border-radius: 5px;
+                border: 1px solid white;
+            }
+
+            .icon:hover{
+                background-color: rgb(17, 17, 138);
+                transition: 0.5s;
             }
             
             .container{
@@ -142,7 +159,7 @@
                 width: calc(100% - 60px);
                 display: block;
                 position: absolute;
-                top:60px;
+                top:50px;
                 left: 50px;
             }
 

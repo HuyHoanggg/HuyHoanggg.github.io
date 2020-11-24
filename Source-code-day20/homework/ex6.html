@@ -8,6 +8,7 @@
     <style>
         *{
             margin: 0;
+            color: white;
         }
 
         .menu-bar{
@@ -58,10 +59,10 @@
         }
 
         .icon{
-            font-size: 30px;
+            font-size: 22px;
             float: left;
             display: none;
-            padding: 5px 0px 5px 20px;
+            margin-top: 4px;
         }
 
         .container{
@@ -85,7 +86,16 @@
             }
 
             .icon{
+                margin-left: 10px;
                 display: block;
+                padding: 4px 10px 1px 10px;
+                border-radius: 5px;
+                border: 1px solid white;
+            }
+
+            .icon:hover{
+                background-color: rgb(17, 17, 138);
+                transition: 0.5s;
             }
 
             ul.active{
