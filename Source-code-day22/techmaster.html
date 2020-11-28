@@ -110,7 +110,43 @@
         }
       }
 
+      @media (max-width: 996px){
+        .nav-indicator{
+          display: none;
+        }
+
+        .highlight{
+          margin: 0px -15px;
+          padding-left: 15px;
+          background-color: #1b3250;
+        }
+      }
+
       @media (max-width: 575px){
+        .card img{
+          height: 300px;
+        }
+      }
+
+      @media (min-width: 1500px){
+        .container{
+          padding: 40px 100px;
+        }
+
+        .card img{
+          height: 280px;
+        }
+
+        .card{
+          margin: 0px 2px 25px;
+        }
+      }
+
+      @media (min-width: 2300px){
+        .container{
+          padding: 40px 150px;
+        }
+
         .card img{
           height: 300px;
         }
@@ -152,7 +188,7 @@
         <li class="nav-item">
           <a class="nav-link" href="#">KHAI GIẢNG</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item highlight">
           <a class="nav-link" href="#">BLOG</a>
           <span class="nav-indicator"></span>
         </li>
