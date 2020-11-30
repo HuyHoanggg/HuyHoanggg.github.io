@@ -1,0 +1,94 @@
+body{
+    font-family: "Playfair Display";
+    font-size: 14px;
+    color: #626262;
+}
+
+.navbar-brand{
+    font-family: "Inconsolata";
+    text-transform: uppercase;
+    font-size: 30px;
+    letter-spacing: 5px;
+}
+
+.navbar{
+    padding: 70px 0px 70px;
+}
+
+ul{
+    margin-left: auto;
+}
+
+.bg-light{
+    background-color: white !important;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link{
+    padding: 10px 0px 10px 105px;
+}
+
+@media (min-width: 1200px){
+    .container, .container-lg, .container-md, .container-sm, .container-xl  {
+        max-width: 1092px;
+    }
+}
+
+
+.col-md-6, .col-md-12{
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.img-responsive{
+    padding-bottom: 95px;
+    max-width: 100%;
+}
+
+.row{
+    margin: 0px 48px;
+}
+
+h6{
+    font-family: "Ubuntu Light";
+    font-size: 14px;
+    color: #b4ad9e;
+}
+
+h2{
+    font-size: 30px;
+    margin: 28px 0px 30px 0px;
+}
+
+p{
+    padding-bottom: 36px;
+}
+
+.intro{
+    margin-bottom: 130px;
+}
+
+.thumbnail img{
+    margin-bottom: 30px;
+}
+
+.item{
+    margin-bottom: 130px;
+}
+
+.container-fluid{
+    background-color: #f0f0f0;
+    padding-top: 70px;
+}
+
+.sign-up{
+    margin-bottom: 100px;
+}
+
+h5{
+    text-align: center;
+}
+
+footer{
+    background-color: #f0f0f0;
+    height: 100px;
+}
