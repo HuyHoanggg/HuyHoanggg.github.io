@@ -152,7 +152,7 @@ button:hover{
 .infor{
     display: flex;
     justify-content: space-between;
-    padding: 40px 0px;
+    padding: 40px 90px;
     align-items: center;
     color: #000000;
 }
@@ -194,12 +194,10 @@ button:hover{
 
     .container{
         max-width: 100%;
-        padding-left: 30px;
-        padding-right: 30px;
     }
 
     .intro{
-        padding:0px;
+        padding:0px 30px;
     }
 
     .thumbnail img{
@@ -213,7 +211,7 @@ button:hover{
     }
 }
 
-@media (max-width: 410px){
+@media (max-width: 554px){
     .infor{
         display: block;
         text-align: center;
