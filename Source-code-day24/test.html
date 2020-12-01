@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .grid{
+            display: grid;
+            grid-row-gap: 10px;
+        }
+
+        .column{
+            /* width: auto; */
+            height: 200px;
+        }
+
+        .bgcl1{
+            background-color: red;
+            width: 1fr;
+        }
+
+        .bgcl2{
+            background-color: blue;
+            width: 50px;
+        }
+
+        .bgcl3{
+            background-color: green;
+            width: 1fr;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid">
+        <div class="column bgcl1"></div>
+        <div class="column bgcl2"></div>
+        <div class="column bgcl3"></div>
+    </div>
+</body>
+</html>
