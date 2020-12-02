@@ -46,7 +46,8 @@ ul{
 }
 
 .row{
-    margin: 0px 48px;
+    margin-top: 0px;
+    margin-left: 63px;
 }
 
 h6{
@@ -60,29 +61,51 @@ h2{
     margin: 28px 0px 30px 0px;
 }
 
-.intro>p{
-    padding-bottom: 36px;
-}
-
-.intro, .item{
-    margin-bottom: 130px;
-}
-
-.col-md-6>a{
-    text-decoration: none;
-    color: #626262;
-}
-
-.col-md-6>a:hover{
-    color: #000000;
+.intro{
+    margin-bottom: 75px;
 }
 
 .col-md-6{
     margin-bottom: 130px;
 }
 
-.thumbnail img{
-    margin-bottom: 30px;
+
+/*---------------------------------- MINIMO_02 ---------------------------------- */
+
+.para{
+    padding-bottom: 46px;
+}
+
+.intro>img{
+    width: 100%;
+    margin-bottom: 55px;
+}
+
+.note{
+    padding: 0px 20px 15px 20px;
+}
+
+.share{
+    font-family: 'Ubuntu';
+    font-size: 13px;
+    margin-left: auto;
+    margin-top: 50px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.share>a{
+    color: #b4ad9e;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+.share>a:hover{
+    color: #000000;
+}
+
+.share>p{
+    margin-right: 10px;
 }
 
 /* ---------------------------------Sign up----------------------------------*/
@@ -92,63 +115,110 @@ h2{
     padding-top: 70px;
 }
 
-.sign-up{
-    margin-bottom: 100px;
+.more{
+    padding: 0px 93px;
 }
 
-h5{
-    text-align: center;
-    color: #333333;
-    font-size: 30px;
-    margin-bottom: 70px;
+.thumbnail>img{
+    max-width: 100%;
 }
 
-.form-group {
-    margin-bottom: 15px; 
-    display: flex;
-    justify-content: center;
-    padding-bottom: 75px;
+.title>h2{
+    font-size: 20px;
+    margin-top: 20px;
 }
 
-.form-group>form>.form-control{
-    border: none;
-    box-shadow: none;
-    background-color: transparent;
-    border-bottom: 1px solid black;
+.more>h6{
+    padding-bottom: 35px;
 }
 
-.form-group>form>input{
-    width: 380px;
-    border-radius: 0;
-    padding-bottom: 10px;
-    padding-left: 5px;
+.grid-container{
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 40px;
+}
+
+.grid-container>a{
+    text-decoration: none;
+    color: #626262;
+}
+
+.grid-container>a:hover{
+    color: #000000;
+}
+
+.article{
+    padding-bottom: 50px;
+}
+
+/*--------------------------------- COMMENT ---------------------------------*/
+
+.side-bar{
+    margin-right: -100px;
+}
+
+.comment{
+    padding: 0px 93px;
+}
+
+.comment>h6{
+    margin-top: 60px;
+    margin-bottom: 35px;
+}
+
+.comment>.share{
+    margin-bottom: 95px;
+    margin-top: -15px;
+}
+
+.guest-comment{
+    display: inline-block;
+    margin-bottom: 50px;
+    width: 100%;
+}
+
+.avatar{
+    float: left;
+}
+
+.avatar>a>img{
+    border-radius: 50%;
+}
+
+.content{
+    padding-left: 100px;
+}
+
+.name>a{
+    text-decoration: none;
+    color: #626262;
+}
+
+.content>a{
+    text-decoration: none;
+}
+
+.content>a>h6:hover, .name>a:hover{
+    color: #000000;
+}
+
+.content>form>input{
+    width: 100%;
+    padding: 24px;
+    outline: none;
+    border: 1px solid #b4ad9e;
+    border-radius: 5px;
+    font-family: 'Ubuntu';
     font-size: 14px;
 }
 
-.input-group-btn>button{
-    border: none;
-    outline: none;
-    border-bottom: 1px solid;
-    padding-bottom: 4px;
-    margin-top: 5px;
+.content>form>input::placeholder{
+    color: #c8c8c8;
 }
 
-/* ---------------------------------LOAD MORE----------------------------------*/
-
-.col-md-12>button{
-    font-size: 20px;
-    background-color: transparent;
-    border: 1px solid #626262;
-    padding: 20px 40px;
-    position: relative;
-    left: 50%;
-    transform: translate(-50%);
-    margin-top: 30px;
-    margin-bottom: 150px;
-}
-
-button:hover{
-    background-color: #f0f0f0;
+.ads{
+    margin-bottom: 60px;
 }
 
 /* ---------------------------------footer----------------------------------*/
@@ -189,6 +259,59 @@ button:hover{
 .follow>p{
     margin-bottom: 0;
 }
+
+/*---------------------------------- MINIMO 3 ----------------------------------*/
+
+.myPhoto{
+    margin-bottom: 30px;
+}
+
+.myself>h2{
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.myStory>p{
+    font-size: 12px;
+    margin-bottom: 20px;
+}
+
+.contact{
+    margin-bottom: 75px;
+}
+
+.contact>a{
+    color: #b4ad9e;
+    margin-right: 10px;
+}
+
+.contact>a:hover, .post-name>a:hover{
+    color: #000000;
+}
+
+.post-name>a{
+    text-decoration: none;
+    color: #626262;
+}
+
+.post-name{
+    display: inline;
+}
+
+.post-name>a>h2{
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.post-cmt>h6{
+    font-size: 12px;
+}
+
+.top-post{
+    margin-bottom: 55px;
+}
+
+/*---------------------------------- RESPONSIVE ---------------------------------- */
 
 @media (min-width: 1200px){
     .container, .container-lg, .container-md, .container-sm, .container-xl  {
@@ -247,12 +370,8 @@ button:hover{
         padding-bottom: 70px;
     }
 
-    h5{
-        font-size: 25px;
-    }
-
-    .form-group>form>input{
-        width: 300px;
+    .title>h2{
+        font-size: 15px;
     }
 }
 
@@ -270,22 +389,9 @@ button:hover{
         justify-content: center;
     }
 
-    .col-md-12>button{
-        font-size: 15px;
-        padding: 10px 20px;
-    }
-
     .container{
         padding-left: 30px;
         padding-right: 30px;
-    }
-
-    h5{
-        font-size: 22px;
-    }
-
-    .form-group>form>input{
-        width: 250px;
     }
 
     .intro{
