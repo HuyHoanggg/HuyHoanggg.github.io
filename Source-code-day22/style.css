@@ -3,6 +3,10 @@
     color: white;
 }
 
+p{
+    text-align: justify;
+}
+
 body{
     font-family: "Playfair Display";
     font-size: 14px;
