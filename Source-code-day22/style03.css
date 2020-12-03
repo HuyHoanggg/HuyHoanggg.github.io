@@ -315,6 +315,10 @@ h2{
     margin-bottom: 55px;
 }
 
+.top-post>ul{
+    padding-left: 20px;
+}
+
 /*---------------------------------- RESPONSIVE ---------------------------------- */
 
 @media (min-width: 1200px){
