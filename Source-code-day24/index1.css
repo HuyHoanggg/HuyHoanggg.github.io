@@ -1,0 +1,53 @@
+.Topics-Section{
+    background: #F2F2F2;
+    padding: 91px 60px;
+    font-family: Poppins;
+    height: 518px;
+    margin-top: -37px;
+    margin-left: -57px;
+}
+
+.explore{
+    text-align: center;
+    font-size: 30px;
+    font-weight: 600;
+    margin-top: -69px;
+}
+.take{
+    text-align: center;
+    color: #969696;
+    font-size: 18px;
+}
+.anh2{
+    width: 282px !important;
+    height: 295px !important;
+    margin: 0 25px 0 18px;
+}
+.slick-next::before {
+    content: none !important;
+}
+
+.slick-next{
+    background: url("anh/front\ button\ \(1\).png") center no-repeat !important;
+    width: 75px !important;
+    height: 75px !important;
+}
+.slick-prev::before {
+    content: none !important;
+}
+.t1{
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 82px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    margin-top: 203px;
+}
+.slick-prev, .slick-next {
+  
+    top: 28% !important;
+   
+}
