@@ -395,6 +395,10 @@
         width: 40px;
     }
 
+    .advan>.hr-res{
+        margin-top: 44px;
+    }
+
     .package>h2{
         margin-top: 0;
     }
