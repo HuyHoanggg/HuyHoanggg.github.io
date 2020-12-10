@@ -9,12 +9,14 @@
 
   <!-- Boostrap -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
-        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous" />
+    integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous" />
 
   <!-- Font Rubik-->
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
 
+  <link href="slick/slick.css" rel="stylesheet" />
+  <link href="slick/slick-theme.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -22,7 +24,8 @@
     <div class="container">
       <nav class="navbar navbar-expand-lg navbar-light ">
         <a class="navbar-brand" href="#">autocryp</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+          aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button> <!-- Button dropdown -->
 
@@ -43,6 +46,8 @@
           </ul>
           <form class="form-inline">
             <button class="login">Login</button>
+          </form>
+          <form class="form-inline">
             <button class="register">Register</button>
           </form>
         </div> <!-- Menu bar -->
@@ -156,26 +161,38 @@
 
     <div id="slide" class="container">
       <h4>What <br /> Customers Say</h4>
-      <div class="slickk slider">
+      <div class="slickk slider" role="toolbar">
 
         <div class="comment activee">
           <p>"I started driving with Uber because I liked the idea that my own car could make me money. After just about
             a couple weeks, I saw that this was something I wanted to do permanently."</p>
-          <span class="name"><strong>Brandon Roger /</strong>  OWW Studio</span>
+          <span class="name"><strong>Brandon Roger /</strong> OWW Studio</span>
         </div>
 
         <div class="comment">
           <p>"I wanted something where I could meet new people and get out of the house. Uber has helped with both of
             those things, plus I’m seeing new parts of the city I’ve never seen before!"</p>
-          <span class="name"><strong>Sean Walker /</strong>  OWW Studio</span>
+          <span class="name"><strong>Sean Walker /</strong> OWW Studio</span>
         </div>
 
         <div class="comment">
           <p>"Uber enables me to have the creative freedom for baking my cakes and also driving on the side so I can
             make more money and also have my dream job."</p>
-          <span class="name"><strong>Jenny Harra /</strong>  OWW Studio</span>
+          <span class="name"><strong>Jenny Harra /</strong> OWW Studio</span>
         </div>
 
+        <div class="comment">
+          <p>"I started driving with Uber because I liked the idea that my own car could make me money. After just
+            about
+            a couple weeks, I saw that this was something I wanted to do permanently."</p>
+          <span class="name"><strong>Brandon Roger /</strong> OWW Studio</span>
+        </div>
+
+        <div class="comment">
+          <p>"I wanted something where I could meet new people and get out of the house. Uber has helped with both of
+            those things, plus I’m seeing new parts of the city I’ve never seen before!"</p>
+          <span class="name"><strong>Sean Walker /</strong> OWW Studio</span>
+        </div>
       </div>
     </div>
   </section>
@@ -217,20 +234,49 @@
   <!--End footer-->
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
-        crossorigin="anonymous"></script>
+    integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+    crossorigin="anonymous"></script>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-        crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"
-        integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s"
-        crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"
+    integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s"
+    crossorigin="anonymous"></script>
+
+  <script src="slick/jquery-1.10.2.js"></script>
+  <script src="slick/jquery-migrate-1.2.1.min.js"></script>
+  <script src="slick/slick.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('.slickk').slick({
+        dots: true,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        responsive: [
+          {
+            breakpoint: 996,
+            settings: {
+              slidesToShow: 2,
+            }
+          },
+          {
+            breakpoint: 768,
+            settings: {
+              slidesToShow: 1,
+            }
+          }
+        ]
+      });
+    });
+  </script>
 </body>
 
 </html>

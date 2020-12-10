@@ -26,11 +26,9 @@
     font-weight: 500;
 }
 
-/* .navbar-collapse>.navbar-nav{
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%);
-} */
+.navbar-light>.navbar-toggler{
+    background: white;
+}
 
 .nav-item>a{
     padding-left: 30px !important;
@@ -39,10 +37,6 @@
 .nav-item>.nav-link:hover, .form-inline>.login:hover{
     color: #18D47D !important;
 }
-/* 
-.collapse>.form-inline{
-    margin-left: auto;
-} */
 
 .form-inline>.login{
     border: none !important;
@@ -280,6 +274,7 @@
     padding-top: 70px;
     padding-left: 25px; 
     color: #031D5B;
+    margin-bottom: 40px;
 }
 
 .activee{
@@ -295,15 +290,15 @@
     padding-bottom: 60px;
     margin-right: 20px;
     color: #5B6C94;
+    height: 400px !important;
 }
 
 .comment>p{
-    margin-top: 70px;
+    margin-top: 40px;
     font-size: 18px;
     line-height: 36px;
     margin-bottom: 40px;
 }
-
 
 #slide>.slickk{
     display: flex;
@@ -317,6 +312,36 @@
     padding-bottom: 100px;
 }
 
+.slider>.slick-prev, .slider>.slick-next{
+    display: none !important;
+}
+
+.slick-dotted.slick-slider{
+    margin-bottom: 0px !important;
+}
+
+.slider>ul{
+    bottom: 30px;
+}
+
+.slick-dots li button{
+    color: #1FDB84 !important;
+    border: 2px solid #1FDB84 !important;
+    border-radius: 50% !important;
+    content: none !important;
+    width: 10px !important;
+    height: 10px !important;
+}
+
+.slick-dots li button:before{
+    content: none !important;
+}
+
+.slick-dots li.slick-active button {
+    color: white !important;
+    background: #1FDB84;
+    border-radius: 50%;
+}
 /*--------------------------- END SLIDE --------------------------- */
 
 /*----------------------------- FOOTER---------------------------- */
@@ -365,9 +390,21 @@
 
 /* ---------------------------MEDIA QUERY------------------------- */
 
+@media (max-width: 1200px){
+    .comment{
+        height: 450px !important;
+    }
+}
+
 @media (max-width: 996px){
     html{
         font-size: 14px;
+    }
+
+    .form-inline{
+        padding-left: 24px;
+        margin-bottom: 15px;
+        margin-top: 3px;
     }
 
     .text{
@@ -421,22 +458,16 @@
         margin-top: 150px;
     }
 
-    #slide>.slickk{
-        display: block;
-    }
-
     #slide>h4{
         margin-bottom: 50px;
     }
 
-    .slickk>.comment{
-        width: 100%;
-        padding: 40px;
-        margin-bottom: 20px;
+    .comment{
+        height: 400px !important;
     }
 
     .comment>p{
-        margin-top: 0;
+        margin-top: 40px;
     }
 
     .footer{
@@ -522,6 +553,14 @@
         margin-top: 100px;
     }
 
+    #slide>h4{
+        font-size: 35px;
+    }
+
+    .comment{
+        height: 300px !important;
+    }
+
     .footer{
         padding-top: 50px;
     }
@@ -574,6 +613,10 @@
 
     .list-platform>ul>li{
         padding: 10px;
+    }
+
+    #slide>h4{
+        font-size: 30px;
     }
 
     .menu-bottom>ul>span{
