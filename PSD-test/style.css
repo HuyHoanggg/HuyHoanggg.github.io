@@ -613,14 +613,6 @@
         padding: 10px 5px;
     }
 
-    .pack>span{
-        font-size: 40px;
-    }
-
-    .pack>h3{
-        font-size: 13px;
-    }
-
     .platform{
         margin-top: 50px;
     }
@@ -639,6 +631,10 @@
 
     #slide>h4{
         font-size: 30px;
+    }
+
+    .comment{
+        height: 400px !important;
     }
 
     .menu-bottom>ul>span{
