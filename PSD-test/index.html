@@ -111,7 +111,7 @@
           <button class="yearly">YEARLY - 2 MONTH FREE</button>
         </div>
 
-        <div class="grid-package">
+        <div id="desktop" class="grid-package">
           <a href="#" class="pack">
             <h3>Starter</h3>
             <span>$10</span>
@@ -154,6 +154,49 @@
 
         </div>
         <!--End grid-package-->
+
+        <div class="grid-package slider package-slide">
+          <div class="pack">
+            <h3>Starter</h3>
+            <span>$10</span>
+            <p>Per Month</p>
+            <div class="benefit">
+              <p>1 Pixel ID*</p>
+              <p>URL</p>
+              <p>Up to 200 shortened links / month</p>
+              <p class="blank">abc</p>
+            </div>
+            <button class="button-res-mb">START FREE TRIAL</button>
+          </div>
+
+          <div class="pack">
+            <h3>Professional</h3>
+            <span>$29</span>
+            <p>Per Month</p>
+            <div class="benefit">
+              <p>5 Pixels ID*</p>
+              <p>1 Custom URL</p>
+              <p>Up to 1,000 shortened links / month</p>
+              <p>5 Team Member</p>
+            </div>
+            <button class="button-res button-res-mb">START FREE TRIAL</button>
+          </div>
+
+          <div class="pack">
+            <h3>Business</h3>
+            <span>$49</span>
+            <p>Per Month</p>
+            <div class="benefit">
+              <p>Unlimited Pixels ID</p>
+              <p>Unlimited Custom URL</p>
+              <p>Unlimited shortened links / month</p>
+              <p>Unlimited Member</p>
+            </div>
+            <button>START FREE TRIAL</button>
+          </div>
+          <!--End pack-->
+
+        </div>
       </div>
       <!--End package-->
     </div>
@@ -275,6 +318,11 @@
           }
         ]
       });
+      $('.package-slide').slick({
+          dots: true,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        });
     });
   </script>
 </body>

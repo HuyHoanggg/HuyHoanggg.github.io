@@ -159,6 +159,10 @@
 
 /*--------------------------- PACKAGE------------------------- */
 
+.package-slide{
+    display: none !important;
+}
+
 .package>h2{
     text-align: center;
     font-weight: 700;
@@ -449,8 +453,8 @@
     }
 
     .pack>button{
-        font-size: 13px;
-        padding: 5px 10px !important;
+        font-size: 11px;
+        padding: 5px 20px !important;
         letter-spacing: 0.5px;
     }
 
@@ -531,9 +535,7 @@
     }
 
     .pack>button{
-        font-size: 12px;
-        letter-spacing: 0.2px;
-        padding: 4px 6px !important;
+        padding: 4px 10px !important;
         margin-top: 30px;
     }
     
@@ -583,6 +585,22 @@
         padding-bottom: 10px !important;
     }
 
+    .package-slide{
+        display: block !important;
+    }
+
+    #desktop{
+        display: none !important;
+    }
+
+    .pack>button{
+        box-shadow: none;
+    }
+
+    .slider>ul{
+        bottom: -30px;
+    }
+
     .package>h2{
         font-size: 17px;
     }
@@ -601,6 +619,10 @@
 
     .pack>h3{
         font-size: 13px;
+    }
+
+    .platform{
+        margin-top: 50px;
     }
 
     .list-platform>ul{
@@ -622,11 +644,5 @@
     .menu-bottom>ul>span{
         margin-left: 10px;
         margin-right: 10px;
-    }
-}
-
-@media (max-width: 420px){
-    .pack>.button-res-mb{
-        margin-top: 124px;
     }
 }
