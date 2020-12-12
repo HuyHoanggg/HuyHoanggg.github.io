@@ -31,13 +31,13 @@
     width: 233px;
     font-size: 25px;
     padding: 15px;
-    border: solid 1px;
     height: 45px;
     border-radius: 20px;
-    overflow-y: auto;
-    overflow-x: auto;
+    overflow: hidden;
     background-color: white;
-    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
 }
 
 .option{

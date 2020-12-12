@@ -6,6 +6,7 @@
     <title>Calculator</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
 </head>
 <body>
     <div id="calculator">
@@ -19,13 +20,13 @@
                 <td><button class="btn option1" onclick="square()">a&#178;</button></td>
                 <td><button class="btn option1" onclick="sqrt()">&#x221a;</button></td>
                 <td><button class="btn option1" onclick="percentage()">%</button></td>
-                <td><button class="btn option" value="x">x</button></td>
+                <td><button class="btn option" value="×">×</button></td>
             </tr>
             <tr>
                 <td><button class="btn number" value="7">7</button></td>
                 <td><button class="btn number" value="8">8</button></td>
                 <td><button class="btn number" value="9">9</button></td>
-                <td><button class="btn option" value="/">/</button></td>
+                <td><button class="btn option" value="÷">÷</button></td>
             </tr>
             <tr>
                 <td><button class="btn number" value="4">4</button></td>
@@ -58,7 +59,8 @@
         }
         
         function equal(){
-            display.innerHTML = display.innerHTML.replace(/x/g , "*");
+            display.innerHTML = display.innerHTML.replace(/×/g , "*");
+            display.innerHTML = display.innerHTML.replace(/÷/g , "/");
             display.innerHTML =eval(display.innerHTML);
         }
 
