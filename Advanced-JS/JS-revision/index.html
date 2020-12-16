@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Revision</title>
+    <style>
+        *{
+            margin: 0;
+            font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+        }
+
+        *::selection{
+            background:#3C5E2C;
+            color: #fff;
+        }
+
+        .container{
+            width: 75%;
+            text-align: justify;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 30px 0px;
+        }
+
+        h1{
+            text-align: center;
+            color: #3C5E2C;
+        }
+
+        p{
+            line-height: 25px;
+            margin-top: 20px;
+        }
+
+        .code{
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Ôn tập JAVASCRIPT</h1>
+        <div class="content">
+            <p><strong>Bài 1:</strong> Viết hàm truyền vào 2 số nguyên, tính tổng tất cả các số nguyên nằm giữa chúng. Ví dụ với tham số 3 và
+                8 ta có kết quả là 22 (bằng 4 + 5 + 6 + 7).
+            </p>
+            <p class="code"><strong>sumInt(a,b)</strong></p>
+            
+            <p><strong>Bài 2:</strong> Cho 1 số nguyên dương, viết hàm tính tổng tất cả các ước số của số đó.</p>
+            <p class="code"><strong>sumDivisor(number)</strong></p>
+            
+            <p><strong>Bài 3:</strong> Cho 1 số nguyên dương, kiểm tra xem số đó có phải là số nguyên tố hay không, kết quả trả về true hoặc
+                false.
+            </p>
+            <p class="code"><strong>kiemtrasnt(n)</strong></p>
+
+            <p><strong>Bài 4:</strong> Cho 1 số nguyên dương.Tính tổng tất cả các số nguyên tố nhỏ hơn hoặc bằng tham số truyền vào.</p>
+            <p class="code"><strong>sumPrimeNumber(n)</strong></p>
+
+            <p><strong>Bài 5:</strong> Chuyển 1 chuỗi gồm nhiều từ thành chuỗi mới viết hoa các chữ cái đầu tiên của mỗi từ.Ví dụ: ''HELLO
+                world'' => ''Hello World''.
+            </p>
+            <p class="code"><strong>capFirstCharacter(a)</strong></p>
+
+            <p><strong>Bài 6:</strong> Chuyển 1 chuỗi gồm nhiều từ thành dạng Spinal case.Ví dụ: ''HELLO world'' => ''hello - world''.</p>
+            <p class="code"><strong>spinalCase(str)</strong></p>
+            
+            <p><strong>Bài 7:</strong> Cho 1 chuỗi, kiểm tra xem chuỗi đó có phải chuỗi đối xứng hay không(đọc xuôi hay ngược đều như nhau,
+                không tính khoảng trắng và không phân biệt hoa thường), kết quả trả về true hoặc false.Ví dụ ''Race car''
+                trả về true, ''hello world'' trả về false.
+            </p>
+            <p class="code"><strong>reverseString(str)</strong></p>
+        </div>
+    </div>
+    <script>
+        //Bài 1: Viết hàm truyền vào 2 số nguyên, tính tổng tất cả các số nguyên nằm giữa chúng. Ví dụ với tham số 3 và 8 ta có kết quả là 22 (bằng 4 + 5 + 6 + 7).
+
+        function sumInt(a, b) {
+            let sum = 0;
+            if (a < b) {
+                for (let i = a + 1; i < b; i++) {
+                    sum += i;
+                }
+                return sum;
+            }
+            else if (a > b) {
+                for (let i = b + 1; i < a; i++) {
+                    sum += i;
+                }
+                return sum;
+            }
+            return sum;
+        }
+
+        // Bài 2: Cho 1 số nguyên dương, viết hàm tính tổng tất cả các ước số của số đó.
+
+        function sumDivisor(number) {
+            let sum = 0;
+            for (let i = 1; i <= (number / 2); i++) {
+                if (number % i == 0) {
+                    sum += i;
+                }
+            }
+            return sum;
+        }
+
+        // Bài 3: Cho 1 số nguyên dương, kiểm tra xem số đó có phải là số nguyên tố hay không, kết quả trả về true hoặc false.
+
+        // function checkPrimeNumber(number) {
+        //     if (number < 2) {
+        //         return false;
+        //     }
+        //     else if (number == 2 || number == 3) {
+        //         return true;
+        //     }
+        //     else {
+        //         for(let i=2; i<= (number/2); i++) {
+        //             if(number % i == 0){
+        //                 return false;
+        //             }
+        //             return true;
+        //         }
+        //     }
+        // }
+
+        function kiemtrasnt(n) {
+            let result = false;
+            if (n < 2) {
+                result = false;
+            }
+            else if (n == 2 || n == 3) {
+                result = true;
+            }
+            else {
+                for (let i = 2; i <= (n / 2); i++) {
+                    if (n % i == 0) {
+                        result = false;
+                        break;
+                    }
+                    else { result = true }
+                }
+            }
+            if (result == true) {
+                return result;
+            }
+            else {
+                return result;
+            }
+        }
+
+        // Bài 4: Cho 1 số nguyên dương.Tính tổng tất cả các số nguyên tố nhỏ hơn hoặc bằng tham số truyền vào.
+
+        function sumPrimeNumber(n) {
+            let sum = 0;
+            if (n < 2) {
+                return 0;
+            }
+            else {
+                for (let i = 2; i <= n; i++) {
+                    if (kiemtrasnt(i)) {
+                        sum += i;
+                    }
+                }
+                return sum;
+            }
+        }
+
+        // Bài 5: Chuyển 1 chuỗi gồm nhiều từ thành chuỗi mới viết hoa các chữ cái đầu tiên của mỗi từ.Ví dụ: ''HELLO world'' => ''Hello World''.
+
+        function capFirstCharacter(a) {
+            let b = a.toString().split(" ");
+            for (let i = 0; i < b.length; i++) {
+                b[i] = b[i].toLowerCase();
+                b[i] = b[i].charAt(0).toUpperCase() + b[i].slice(1);
+            }
+            return b.join(" ");
+        }
+
+        // Bài 6: Chuyển 1 chuỗi gồm nhiều từ thành dạng Spinal case.Ví dụ: ''HELLO world'' => ''hello - world''.
+
+        function spinalCase(str) {
+            str = str.toLowerCase();
+            str = str.replace(/ /g, " - ");
+            return str;
+        }
+
+        // Bài 7: Cho 1 chuỗi, kiểm tra xem chuỗi đó có phải chuỗi đối xứng hay không(đọc xuôi hay ngược đều như nhau, không tính khoảng trắng và không phân biệt hoa thường), kết quả trả về true hoặc false.Ví dụ ''Race car'' trả về true, ''hello world'' trả về false.
+
+        function reverseString(str) {
+            str = str.replace(/ /g, "");
+            str = str.toLowerCase();
+            let result = false;
+            if (str.length == 1) {
+                result = false;
+            } else {
+                for (let i = 0; i < (str.length) / 2; i++) {
+                    if (str[i] !== str[str.length - i - 1]) {
+                        result = false;
+                        break;
+                    }
+                    else {
+                        result = true;
+                    }
+                }
+            }
+            if (result == true) {
+                return result;
+            }
+            else {
+                return result;
+            }
+        }
+    </script>
+</body>
+
+</html>
