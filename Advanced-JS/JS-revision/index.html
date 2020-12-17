@@ -210,6 +210,11 @@
             return b.join(" ");
         }
 
+        function test(x){
+            x = x.charAt(0).toUpperCase() + x.slice(1).toLowerCase();
+            return x;
+        }
+
         // Bài 6: Chuyển 1 chuỗi gồm nhiều từ thành dạng Spinal case.Ví dụ: ''HELLO world'' => ''hello - world''.
 
         function spinalCase(str) {
