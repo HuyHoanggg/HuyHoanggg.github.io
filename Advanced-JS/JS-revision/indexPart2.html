@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Revision</title>
+    <style>
+        * {
+            margin: 0;
+            font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+        }
+
+        *::selection {
+            background: #3C5E2C;
+            color: #fff;
+        }
+
+        .container {
+            width: 75%;
+            text-align: justify;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 30px 0px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #3C5E2C;
+        }
+
+        a {
+            text-decoration: none;
+            border: 1px solid #3C5E2C;
+            color: #3C5E2C;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 15px;
+            font-weight: bold;
+        }
+
+        a:hover {
+            background-color: #3C5E2C;
+            color: white;
+            transition: 0.3s;
+        }
+
+        .container>p {
+            text-align: center;
+        }
+
+        p {
+            line-height: 25px;
+            margin-top: 20px;
+        }
+
+        .code {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Ôn tập JAVASCRIPT</h1>
+        <p><a href="index.html">Back to Part 1</a></p>
+        <div class="content">
+            <p><strong>Bài 1:</strong> Cho 1 mảng các chuỗi. Viết hàm lọc ra các phần tử có độ dài lớn nhất. Ví
+                dụ với tham số [''aba'', ''aa'', ''ad'', ''c'', ''vcd''] thì kết quả trả về [''aba'', ''vcd''].
+            </p>
+            <p class="code"><strong>maxArr(arr)</strong></p>
+
+            <p><strong>Bài 2:</strong> Viết hàm so sánh mảng, truyền vào 2 mảng bất kỳ (chỉ chứa số nguyên), kết quả trả
+                về là 1 mảng chỉ chứa những phần tử không đồng thời nằm trong 2 mảng truyền vào. Ví dụ truyền vào [1, 2,
+                3] và [1, 3, 4, 5, 5] thì kết quả trả về là mảng [2, 4, 5, 5].</p>
+            <p class="code"><strong>sumDivisor(number)</strong></p>
+
+            <p><strong>Bài 3:</strong> Cho 2 số nguyên dương m và n. Tạo ra 1 mảng 2 chiều m x n là các số nguyên liên
+                tiếp (tính từ 1) theo kiểu ziczac. Ví dụ với m = 3 và n = 4 thì kết quả là mảng 2 chiều như sau [ [1, 2,
+                3, 4], [8, 7, 6, 5], [9, 10, 11, 12] ].
+            </p>
+            <p class="code"><strong>kiemtrasnt(n)</strong></p>
+
+            <p><strong>Bài 4:</strong> Cho 1 mảng các object chứa thông tin sinh viên dạng { name: ''Huy'', gender:
+                ''Male'', age: 20 }. Viết hàm tính ra số tuổi trung bình của toàn bộ sinh viên.</p>
+            <p class="code"><strong>sumPrimeNumber(n)</strong></p>
+
+            <p><strong>Bài 5:</strong> Cho 1 mảng các object chứa thông tin sinh viên dạng { name: ''Huy'', gender:
+                ''Male'', age: 20 }. Viết hàm sắp xếp lại mảng trên theo tuổi học viên từ cao đến thấp.
+            </p>
+            <p class="code"><strong>capFirstCharacter(a)</strong></p>
+
+            <p><strong>Bài 6:</strong> Cho 1 mảng các object chứa thông tin sinh viên dạng { name: ''Huy'', gender:
+                ''Male'', age: 20 }. Viết hàm sắp xếp lại mảng trên theo tên học viên (không phân biệt hoa thường).</p>
+            <p class="code"><strong>spinalCase(str)</strong></p>
+
+            <p><strong>Bài 7:</strong> Cho 1 mảng các object chứa thông tin sinh viên dạng { name: ''Huy'', gender:
+                ''Male'', age: 20 }. Viết hàm lọc ra những sinh viên nào có tên bắt đầu bằng chữ ''H'' hoặc ''h''.
+            </p>
+            <p class="code"><strong>reverseString(str)</strong></p>
+        </div>
+    </div>
+    <script>
+        // Bài 1: Cho 1 mảng các chuỗi. Viết hàm lọc ra các phần tử có độ dài lớn nhất. Ví dụ với tham số [''aba'', ''aa'', ''ad'', ''c'', ''vcd''] thì kết quả trả về [''aba'', ''vcd''].
+
+        // function maxArr(arr){
+        //     let list = [];
+        //     let max = 0;
+        //     for (let i = 0; i < arr.length; i++){
+        //         if (max < arr[i].length){
+        //             max = arr[i].length;
+        //         }
+        //     }
+        //     for (let i = 0; i < arr.length; i++){
+        //         if (arr[i].length == max){
+        //             list.push(arr[i]);
+        //         }
+        //     }
+        //     return list;
+        // }  
+        
+        function maxArr(arr){
+            let max = "";
+            for (let i = 0; i<arr.length; i++){
+                if(max.length < arr[i].length){
+                    max = arr[i];
+                }
+            }
+
+            let maxString = max.length;
+
+            let list = arr.filter(a => {
+                return a.length == maxString;
+            });
+
+            return list;
+        }
+        // Bài 2: Viết hàm so sánh mảng, truyền vào 2 mảng bất kỳ (chỉ chứa số nguyên), kết quả trả về là 1 mảng chỉ chứa những phần tử không đồng thời nằm trong 2 mảng truyền vào. Ví dụ truyền vào   [1, 2, 3] và [1, 3, 4, 5, 5] thì kết quả trả về là mảng [2, 4, 5, 5].
+
+        // function compareArr(a, b) {
+        //     const newArr = [a.filter(x =>)]
+            
+        // }
+
+        // Bài 3: Cho 2 số nguyên dương m và n. Tạo ra 1 mảng 2 chiều m x n là các số nguyên liên tiếp (tính từ 1) theo kiểu ziczac. Ví dụ với m = 3 và n = 4 thì kết quả là mảng 2 chiều như sau [ [1, 2, 3, 4], [8, 7, 6, 5], [9, 10, 11, 12] ].
+
+
+
+        // Bài 4: Cho 1 mảng các object chứa thông tin sinh viên dạng { name: ''Huy'', gender: ''Male'', age: 20 }. Viết hàm tính ra số tuổi trung bình của toàn bộ sinh viên.
+        
+        function ageAverage(){
+
+        }
+
+        // Bài 5: Cho 1 mảng các object chứa thông tin sinh viên dạng { name: ''Huy'', gender : ''Male'', age: 20 }. Viết hàm sắp xếp lại mảng trên theo tuổi học viên từ cao đến thấp.
+
+        function arrangeByAge(){
+
+        }
+
+        // Bài 6: Cho 1 mảng các object chứa thông tin sinh viên dạng { name: ''Huy'', gender: ''Male'', age: 20 }. Viết hàm sắp xếp lại mảng trên theo tên học viên (không phân biệt hoa thường).
+
+        function arrangeByName(){
+            return student.name.sort();
+        }
+
+        // Bài 7: Cho 1 mảng các object chứa thông tin sinh viên dạng { name: ''Huy'', gender: ''Male'', age: 20 }. Viết hàm lọc ra những sinh viên nào có tên bắt đầu bằng chữ ''H'' hoặc ''h''.
+    
+        function filterByName(){
+
+        }
+    
+    </script>
+</body>
+
+</html>

@@ -6,17 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Javascript Revision</title>
     <style>
-        *{
+        * {
             margin: 0;
             font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
         }
 
-        *::selection{
-            background:#3C5E2C;
+        *::selection {
+            background: #3C5E2C;
             color: #fff;
         }
 
-        .container{
+        .container {
             width: 75%;
             text-align: justify;
             position: absolute;
@@ -26,17 +26,37 @@
             padding: 30px 0px;
         }
 
-        h1{
+        h1 {
             text-align: center;
             color: #3C5E2C;
         }
 
-        p{
+        a{
+            text-decoration: none;
+            border: 1px solid #3C5E2C;
+            color: #3C5E2C;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 15px;
+            font-weight: bold;
+        }
+
+        a:hover{
+            background-color: #3C5E2C;
+            color: white;
+            transition: 0.3s;
+        }
+
+        .container>p{
+            text-align: center;
+        }
+
+        p {
             line-height: 25px;
             margin-top: 20px;
         }
 
-        .code{
+        .code {
             text-align: center;
         }
     </style>
@@ -45,8 +65,10 @@
 <body>
     <div class="container">
         <h1>Ôn tập JAVASCRIPT</h1>
+        <p><a href="indexPart2.html">Go to Part 2</a></p>
         <div class="content">
-            <p><strong>Bài 1:</strong> Viết hàm truyền vào 2 số nguyên, tính tổng tất cả các số nguyên nằm giữa chúng. Ví dụ với tham số 3 và
+            <p><strong>Bài 1:</strong> Viết hàm truyền vào 2 số nguyên, tính tổng tất cả các số nguyên nằm giữa chúng.
+                Ví dụ với tham số 3 và
                 8 ta có kết quả là 22 (bằng 4 + 5 + 6 + 7).
             </p>
             <p class="code"><strong>sumInt(a,b)</strong></p>
@@ -59,28 +81,34 @@
                 <button onclick="sumInt(a,b)">Kết Quả</button>
                 <input type="text" disabled>
             </form> -->
-            
+
             <p><strong>Bài 2:</strong> Cho 1 số nguyên dương, viết hàm tính tổng tất cả các ước số của số đó.</p>
             <p class="code"><strong>sumDivisor(number)</strong></p>
-            
-            <p><strong>Bài 3:</strong> Cho 1 số nguyên dương, kiểm tra xem số đó có phải là số nguyên tố hay không, kết quả trả về true hoặc
+
+            <p><strong>Bài 3:</strong> Cho 1 số nguyên dương, kiểm tra xem số đó có phải là số nguyên tố hay không, kết
+                quả trả về true hoặc
                 false.
             </p>
             <p class="code"><strong>kiemtrasnt(n)</strong></p>
 
-            <p><strong>Bài 4:</strong> Cho 1 số nguyên dương.Tính tổng tất cả các số nguyên tố nhỏ hơn hoặc bằng tham số truyền vào.</p>
+            <p><strong>Bài 4:</strong> Cho 1 số nguyên dương.Tính tổng tất cả các số nguyên tố nhỏ hơn hoặc bằng tham số
+                truyền vào.</p>
             <p class="code"><strong>sumPrimeNumber(n)</strong></p>
 
-            <p><strong>Bài 5:</strong> Chuyển 1 chuỗi gồm nhiều từ thành chuỗi mới viết hoa các chữ cái đầu tiên của mỗi từ.Ví dụ: ''HELLO
+            <p><strong>Bài 5:</strong> Chuyển 1 chuỗi gồm nhiều từ thành chuỗi mới viết hoa các chữ cái đầu tiên của mỗi
+                từ.Ví dụ: ''HELLO
                 world'' => ''Hello World''.
             </p>
             <p class="code"><strong>capFirstCharacter(a)</strong></p>
 
-            <p><strong>Bài 6:</strong> Chuyển 1 chuỗi gồm nhiều từ thành dạng Spinal case.Ví dụ: ''HELLO world'' => ''hello - world''.</p>
+            <p><strong>Bài 6:</strong> Chuyển 1 chuỗi gồm nhiều từ thành dạng Spinal case.Ví dụ: ''HELLO world'' =>
+                ''hello - world''.</p>
             <p class="code"><strong>spinalCase(str)</strong></p>
-            
-            <p><strong>Bài 7:</strong> Cho 1 chuỗi, kiểm tra xem chuỗi đó có phải chuỗi đối xứng hay không(đọc xuôi hay ngược đều như nhau,
-                không tính khoảng trắng và không phân biệt hoa thường), kết quả trả về true hoặc false.Ví dụ ''Race car''
+
+            <p><strong>Bài 7:</strong> Cho 1 chuỗi, kiểm tra xem chuỗi đó có phải chuỗi đối xứng hay không(đọc xuôi hay
+                ngược đều như nhau,
+                không tính khoảng trắng và không phân biệt hoa thường), kết quả trả về true hoặc false.Ví dụ ''Race
+                car''
                 trả về true, ''hello world'' trả về false.
             </p>
             <p class="code"><strong>reverseString(str)</strong></p>
@@ -88,7 +116,7 @@
     </div>
     <script>
         //Bài 1: Viết hàm truyền vào 2 số nguyên, tính tổng tất cả các số nguyên nằm giữa chúng. Ví dụ với tham số 3 và 8 ta có kết quả là 22 (bằng 4 + 5 + 6 + 7).
-        
+
         // let a = document.getElementById('firstNumber').value;
         // let b = document.getElementById('secondNumber').value;
 
@@ -109,18 +137,18 @@
         //     return sum;
         // }
 
-        function sumInt(a,b){
+        function sumInt(a, b) {
             let sum = 0;
             let min, max;
-            if (a<b){
+            if (a < b) {
                 min = a;
                 max = b;
             }
-            else{
+            else {
                 min = b;
                 max = a;
             }
-            for (let i = min+1; i<max; i++){
+            for (let i = min + 1; i < max; i++) {
                 sum += i;
             }
             return sum;
@@ -144,14 +172,11 @@
             if (number < 2) {
                 return false;
             }
-            else if (number == 2 || number == 3) {
-                return true;
-            }
             else {
-                for(let i=2; i<= Math.sqrt(number); i++) {
-                    if(number % i == 0){
+                for (let i = 2; i <= Math.sqrt(number); i++) {
+                    if (number % i == 0) {
                         return false;
-                    }  
+                    }
                 }
                 return true;
             }
@@ -161,18 +186,14 @@
 
         function sumPrimeNumber(n) {
             let sum = 0;
-            if (n < 2) {
-                return 0;
-            }
-            else {
-                for (let i = 2; i <= n; i++) {
-                    if (checkPrimeNumber(i)) {
-                        sum += i;
-                    }
+            for (let i = 2; i <= n; i++) {
+                if (checkPrimeNumber(i)) {
+                    sum += i;
                 }
-                return sum; 
             }
+            return sum;
         }
+        
 
         // Bài 5: Chuyển 1 chuỗi gồm nhiều từ thành chuỗi mới viết hoa các chữ cái đầu tiên của mỗi từ.Ví dụ: ''HELLO world'' => ''Hello World''.
 
@@ -185,7 +206,7 @@
             return b.join(" ");
         }
 
-        function test(x){
+        function test(x) {
             x = x.charAt(0).toUpperCase() + x.slice(1).toLowerCase();
             return x;
         }
@@ -203,16 +224,12 @@
         function reverseString(str) {
             str = str.replace(/ /g, "");
             str = str.toLowerCase();
-            if (str.length == 1) {
-                return false;
-            } else {
-                for (let i = 0; i < (str.length) / 2; i++) {
-                    if (str[i] !== str[str.length - i - 1]) {
-                        return false;
-                    }
+            for (let i = 0; i < (str.length) / 2; i++) {
+                if (str[i] !== str[str.length - i - 1]) {
+                    return false;
                 }
-                return true;
             }
+            return true;
         }
     </script>
 </body>
