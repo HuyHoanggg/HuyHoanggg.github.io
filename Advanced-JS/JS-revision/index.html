@@ -198,9 +198,8 @@
         // Bài 5: Chuyển 1 chuỗi gồm nhiều từ thành chuỗi mới viết hoa các chữ cái đầu tiên của mỗi từ.Ví dụ: ''HELLO world'' => ''Hello World''.
 
         function capFirstCharacter(a) {
-            let b = a.split(" ");
+            let b = a.toLowerCase().split(" ");
             for (let i = 0; i < b.length; i++) {
-                b[i] = b[i].toLowerCase();
                 b[i] = b[i].charAt(0).toUpperCase() + b[i].slice(1);
             }
             return b.join(" ");
@@ -215,7 +214,7 @@
 
         function spinalCase(str) {
             str = str.toLowerCase();
-            str = str.replace(/ /g, " - ");
+            str = str.replace(/ /g, "-");
             return str;
         }
 
