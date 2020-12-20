@@ -81,7 +81,7 @@
                 tiếp (tính từ 1) theo kiểu ziczac. Ví dụ với m = 3 và n = 4 thì kết quả là mảng 2 chiều như sau [ [1, 2,
                 3, 4], [8, 7, 6, 5], [9, 10, 11, 12] ].
             </p>
-            <p class="code"><strong></strong></p>
+            <p class="code"><strong>ziczac(m,n)</strong></p>
 
             <p><strong>Bài 4:</strong> Cho 1 mảng các object chứa thông tin sinh viên dạng { name: ''Huy'', gender:
                 ''Male'', age: 20 }. Viết hàm tính ra số tuổi trung bình của toàn bộ sinh viên.</p>
@@ -156,7 +156,23 @@
 
         // Bài 3: Cho 2 số nguyên dương m và n. Tạo ra 1 mảng 2 chiều m x n là các số nguyên liên tiếp (tính từ 1) theo kiểu ziczac. Ví dụ với m = 3 và n = 4 thì kết quả là mảng 2 chiều như sau [ [1, 2, 3, 4], [8, 7, 6, 5], [9, 10, 11, 12] ].
 
-
+        function ziczac(m,n){
+            let abc = [],
+                cba = [],
+                result = [];
+            for (let i=1; i<=m*n; i++){
+                abc.push(i);
+            }
+            for (let j=0; j<m; j++){
+                cba = abc.splice(0,n);
+                if (j%2==1){
+                    result[j] = cba.reverse();
+                }else{
+                    result[j] = cba;
+                }
+            }
+            return result;
+        }
 
         // Bài 4: Cho 1 mảng các object chứa thông tin sinh viên dạng { name: ''Huy'', gender: ''Male'', age: 20 }. Viết hàm tính ra số tuổi trung bình của toàn bộ sinh viên.
         

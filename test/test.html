@@ -8,8 +8,13 @@
         *{
             margin: 0;
         }
+
+        .grid{
+            margin-left: 5px;
+        }
+
         .grid-item{
-            width: calc(100%/3);
+            width: calc(100%/3 - 5px);
         }
 
         .grid-item>img{
@@ -70,6 +75,7 @@
         $(".grid").imagesLoaded(function () {
           $(".grid").masonry({
             itemSelector: ".grid-item",
+            gutter: 5
           });
         });
       </script>
