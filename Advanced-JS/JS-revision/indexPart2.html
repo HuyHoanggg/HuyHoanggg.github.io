@@ -142,12 +142,12 @@
         function arrComparison(arr1,arr2){
             let arr = [];
             for(let i = 0 ; i < arr1.length ; i++){
-                if (arr2.indexOf(arr1[i],0) == -1){
+                if (arr2.indexOf(arr1[i]) == -1){
                     arr.push(arr1[i]);
                 }
             }
             for(let j = 0 ; j < arr2.length ; j++){
-                if (arr1.indexOf(arr2[j],0) == -1 ){
+                if (arr1.indexOf(arr2[j]) == -1 ){
                     arr.push(arr2[j]);
                 }
             }
