@@ -122,14 +122,12 @@
         // }  
         
         function maxArr(arr){
-            let max = "";
+            let maxString = 0;
             for (let i = 0; i<arr.length; i++){
-                if(max.length < arr[i].length){
-                    max = arr[i];
+                if(maxString < arr[i].length){
+                    maxString = arr[i].length;
                 }
             }
-
-            let maxString = max.length;
 
             let list = arr.filter(a => {
                 return a.length == maxString;
