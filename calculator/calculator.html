@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
 
+    <link rel="stylesheet" href="light.css" id="theme">
+
     <!-- Jquery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
@@ -13,177 +15,150 @@
 
     <!-- font-awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
-    <style>
-        *{
-            font-family: 'Courier New', Courier, monospace;
-        }
-        #calculator{
-            margin: 0 auto;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            text-align: right;
-            border: none;
-            border-radius: 10px;
-            padding: 20px;
-            background-color: #D0D9E1;
-            transform: translate(-50%,-50%);
-        }
-
-        .btn{
-            width: 60px;
-            height: 60px;
-            margin: 2px;
-            cursor: pointer;
-            font-size: 25px;
-            border-radius: 20px;
-            border: none;
-            outline: none;
-            color: white;
-        }
-
-        #display{
-            margin: 4px;
-            width: 233px;
-            font-size: 25px;
-            padding: 15px;
-            height: 45px;
-            border-radius: 20px;
-            overflow: hidden;
-            background-color: white;
-            display: flex;
-            align-items: center;
-            justify-content: flex-end;
-        }
-
-        .option{
-            background-color: #12161F;
-        }
-
-        .option:hover{
-            background-color: #252e42;
-        }
-
-        .number{
-            background-color: #7D99CA;
-        }
-
-        .number:hover{
-            background-color: #4a72b8;
-        }
-
-        .option1{
-            background-color: #1C395F;
-        }
-
-        .option1:hover{
-            background-color: #0f2847;
-        }
-
-        .delete{
-            background-color: #041434;
-        }
-
-        .delete:hover{
-            background-color: #262c53;
-        }
-
-    </style>
+    
 </head>
 <body>
     <div id="calculator">
+        <div>
+            <button id="mode" onclick="switchTheme()">Light Mode 🌙</button>
+        </div>
         <div id="display"></div>
         <table>
             <tr>
-                <td colspan="3"><button class="btn delete" style="width: 197px" onclick="clean()">AC</button></td>
-                <td><button class="btn option1" onclick="giaiThua()">a!</button></td>
+                <td colspan="3"><button class="btn delete clean" style="width: 197px" >AC</button></td>
+                <td><button class="btn option1 giaithua">a!</button></td>
             </tr>
             <tr>
-                <td><button class="btn option1" onclick="square()">a&#178;</button></td>
-                <td><button class="btn option1" onclick="sqrt()">&#x221a;</button></td>
-                <td><button class="btn option1" onclick="percentage()">%</button></td>
-                <td><button class="btn option" value="×">×</button></td>
+                <td><button class="btn option1 square">a&#178;</button></td>
+                <td><button class="btn option1 sqrt">&#x221a;</button></td>
+                <td><button class="btn option1 percent">%</button></td>
+                <td><button class="btn option multi" value="×">×</button></td>
             </tr>
             <tr>
                 <td><button class="btn number" value="7">7</button></td>
                 <td><button class="btn number" value="8">8</button></td>
                 <td><button class="btn number" value="9">9</button></td>
-                <td><button class="btn option" value="÷">÷</button></td>
+                <td><button class="btn option divide" value="÷">÷</button></td>
             </tr>
             <tr>
                 <td><button class="btn number" value="4">4</button></td>
                 <td><button class="btn number" value="5">5</button></td>
                 <td><button class="btn number" value="6">6</button></td>
-                <td><button class="btn option" value="+">+</button></td>
+                <td><button class="btn option plus" value="+">+</button></td>
             </tr>
             <tr>
                 <td><button class="btn number" value="1">1</button></td>
                 <td><button class="btn number" value="2">2</button></td>
                 <td><button class="btn number" value="3">3</button></td>
-                <td><button class="btn option" value="-">-</button></td>
+                <td><button class="btn option minus" value="-">-</button></td>
             </tr>
             <tr>
-                <td><button class="btn delete" onclick="undo()"><i style="font-size: 22px;" class="material-icons">backspace</i></button></td>
+                <td><button class="btn delete undo"><i style="font-size: 22px;" class="material-icons">backspace</i></button></td>
                 <td><button class="btn number" value="0">0</button></td>
-                <td><button class="btn delete" value=".">.</button></td>
-                <td><button class="btn option" onclick="equal()">=</button></td>
+                <td><button class="btn delete dot" value=".">.</button></td>
+                <td><button class="btn equal">=</button></td>
             </tr>
         </table>
     </div>
     <script>
-        const numbers = document.getElementsByClassName('btn');
-        const display = document.getElementById("display");
 
-        for(let number of numbers){
-            number.addEventListener("click", function(){
-                display.innerHTML = display.innerHTML + this.value;
-            })
-        }
-        
-        function equal(){
-            display.innerHTML = display.innerHTML.replace(/×/g , "*");
-            display.innerHTML = display.innerHTML.replace(/÷/g , "/");
-            display.innerHTML =eval(display.innerHTML);
-        }
+        $(function(){
+            $('table button.multi').attr('disabled',true);
+            $('table button.divide').attr('disabled',true);
+            $('table button.equal').attr('disabled',true);
+        });
 
-        function giaiThua() {
-            if (display.innerHTML < 0) {
-                display.innerHTML = "Error!";
-            } else if (display.innerHTML == 0) {
-                display.innerHTML = 1;
-            } else {
+        $('table button.number, table button.option, table button.dot').on('click', function(){
+            char = $(this).html();
+            result = $('#calculator #display').html();
+            $('#calculator #display').html(result + char);
+            $('table button.equal').removeAttr('disabled');
+            $('table button.option').removeAttr('disabled');
+        });
+
+        $('table button.multi').on('click', function(){
+            $('table button.multi').attr('disabled',true);
+            $('table button.divide').attr('disabled',true);
+        });
+
+        $('table button.divide').on('click',function(){
+            $('table button.divide').attr('disabled',true);
+            $('table button.multi').attr('disabled',true);
+        });
+
+        $('table button.clean').on('click', function(){
+            $('#calculator #display').html("");
+        });
+
+        $('table button.undo').on('click', function(){
+            result = $('#calculator #display').html();
+            $('#calculator #display').html(result.substring(0, result.length - 1));
+        });
+
+        $('table button.percent').on('click', function(){
+            result = $('#calculator #display').html();
+            $('#calculator #display').html(result / 100);
+        });
+
+        $('table button.square').on('click', function(){
+            result = $('#calculator #display').html();
+            if(result == ''){
+                $('#calculator #display').html(0);
+            }else{
+               $('#calculator #display').html(result * result); 
+            }
+        });
+
+        $('table button.sqrt').on('click',function(){
+            result = $('#calculator #display').html();
+            $('#calculator #display').html(Math.sqrt(result)); 
+        });
+
+        $('table button.giaithua').on('click',function(){
+            result = $('#calculator #display').html();
+            if(result < 0){
+                $('#calculator #display').html('Error!');
+            }else if(result == 0){
+                $('#calculator #display').html(1);
+            }else{
                 let res = 1;
-                for (let i = 1; i <= display.innerHTML; i++) {
+                for (let i = 1; i <= result; i++) {
                     res = res * i;
                 }
-                display.innerHTML = res;
+                $('#calculator #display').html(res);
+            }
+        })
+
+        $('table button.equal').on('click', function(){
+            result = $('#calculator #display').html();
+            result = result.replaceAll("×" , "*");
+            result = result.replaceAll("÷" , "/");
+            $('#calculator #display').html(eval(result));
+        });
+
+        function switchTheme() {
+            let mode = document.getElementById("mode");
+            let theme = document.getElementById("theme");
+            if (theme.getAttribute("href") == "light.css") {
+                theme.href = "dark.css";
+                mode.innerHTML = "Dark Mode 🌙";
+            } else {
+                theme.href = "light.css";
+                mode.innerHTML = "Light Mode 🌙";
             }
         }
 
-        function percentage(){
-            display.innerHTML = display.innerHTML/100;
-        }
-
-        function sqrt(){
-            display.innerHTML = Math.sqrt(display.innerHTML);
-        }
-
-        function square(){
-            if(display.innerHTML == ""){
-                display.innerHTML = 0;
-            }else{
-                display.innerHTML = eval(display.innerHTML) * eval(display.innerHTML);
-            }
-        }
-
-        function clean(){
-            display.innerHTML = "";
-        }
-
-        function undo(){
-            let result = display.innerHTML;
-            display.innerHTML = result.substring(0,result.length-1);
-        }
+        // $('#calculator button#mode').on('click',function(){
+        //     mode = $('#mode').html();
+        //     theme = $('#theme');
+        //     if (theme.getAttribute("href") == "light.css"){
+        //         theme.href = "dark.css";
+        //         $('#mode').html("Dark Mode 🌙");
+        //     }else{
+        //         theme.href = "light.css";
+        //         $('#mode').html("Light Mode 🌙");
+        //     }
+        // });
     </script>
 </body>
 </html>

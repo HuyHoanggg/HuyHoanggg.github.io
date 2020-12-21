@@ -207,7 +207,7 @@
         // Bài 7: Cho 1 mảng các object chứa thông tin sinh viên dạng { name: ''Huy'', gender: ''Male'', age: 20 }. Viết hàm lọc ra những sinh viên nào có tên bắt đầu bằng chữ ''H'' hoặc ''h''.
     
         function filterByName(arr){
-            return arr.filter(a => a.name.slice(0,1) == 'H' || a.name.slice(0,1) == 'h');
+            return arr.filter(a => a.name.charAt(0).toUpperCase() == 'H');
         } 
     
     </script>
