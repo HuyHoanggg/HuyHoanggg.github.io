@@ -19,6 +19,7 @@
 </head>
 <body>
     <div id="calculator">
+        <div class="time"></div>
         <div>
             <button id="mode" onclick="switchTheme()">Light Mode 🌙</button>
         </div>
@@ -161,6 +162,9 @@
                 $('#mode').html("Light Mode 🌙");
             }
         });
+
+        $('#calculator .time').html((new Date()).getHours() + " : " + (new Date().getMinutes()));
+        
     </script>
 </body>
 </html>

@@ -54,6 +54,12 @@
     justify-content: flex-end;
 }
 
+#calculator>.time{
+    float: left;
+    padding: 2px 0px 0px 5px;
+    font-size: 15px;
+}
+
 .number{
     background-color: #1C395F;
 }
