@@ -20,6 +20,12 @@
     color: black;
     border: none;
     outline: none;
+    border-radius: 5px;
+}
+
+#mode:hover{
+    background-color: #1C395F;
+    color: white;
 }
 
 .btn{
