@@ -56,10 +56,10 @@
     background-color: #4a72b8;
 }
 
-.option, .option1, .delete{
+.option, .option1, .equal, .delete{
     background-color: #1C395F;
 }
 
-.option1:hover, .option:hover, .delete:hover{
+.option1:hover, .option:hover, .equal:hover, .delete:hover{
     background-color: #0f2847;
 }
