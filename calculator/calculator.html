@@ -69,6 +69,15 @@
             $('table button.equal').attr('disabled',true);
         });
 
+        //Set thời gian
+        $(function setTime(){
+            $('#calculator .time').html((new Date()).getHours() + " : " + (new Date().getMinutes()));
+            setInterval(setTime,1000);
+        });
+
+        setTime();
+        
+
         //Thực hiện các hành động bên trong khi ấn vào các nút số, phép tính, dấu '.'
         $('table button.number, table button.option, table button.dot').on('click', function(){
             char = $(this).html(); //Lấy giá trị vừa click
@@ -162,8 +171,6 @@
                 $('#mode').html("Light Mode 🌙");
             }
         });
-        
-        $('#calculator .time').html((new Date()).getHours() + " : " + (new Date().getMinutes()));
         
     </script>
 </body>
