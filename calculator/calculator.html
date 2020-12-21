@@ -147,29 +147,20 @@
             $('#calculator #display').html(eval(result));
         });
 
-        function switchTheme() {
-            let mode = document.getElementById("mode");
-            let theme = document.getElementById("theme");
-            if (theme.getAttribute("href") == "light.css") {
-                theme.href = "dark.css";
-                mode.innerHTML = "Dark Mode 🌙";
-            } else {
-                theme.href = "light.css";
-                mode.innerHTML = "Light Mode 🌙";
-            }
-        }
+        //Thay đổi theme 
+        $('#calculator button#mode').click(function(){
 
-        // $('#calculator button#mode').on('click',function(){
-        //     mode = $('#mode').html();
-        //     theme = $('#theme');
-        //     if (theme.getAttribute("href") == "light.css"){
-        //         theme.href = "dark.css";
-        //         $('#mode').html("Dark Mode 🌙");
-        //     }else{
-        //         theme.href = "light.css";
-        //         $('#mode').html("Light Mode 🌙");
-        //     }
-        // });
+            if ($('#theme').attr("href") == "light.css")
+            {
+                $('#theme').attr("href","dark.css");
+                $('#mode').html("Dark Mode 🌙");
+            }
+            else if($('#theme').attr("href") == "dark.css")
+            {
+                $('#theme').attr("href","light.css");
+                $('#mode').html("Light Mode 🌙");
+            }
+        });
     </script>
 </body>
 </html>
