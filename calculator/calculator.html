@@ -165,7 +165,14 @@
 
         //Set thời gian
         $(function setTime(){
-            $('#calculator .time').html((new Date()).getHours() + " : " + (new Date().getMinutes()));
+            let clock = new Date();
+            if (clock.getMinutes() < 10){
+                $('#calculator .time').html(clock.getHours() + " : " + "0" + clock.getMinutes());
+            }else if (clock.getMinutes() == 0){
+                $('#calculator .time').html(clock.getHours() + " : 00");
+            }else{
+                $('#calculator .time').html(clock.getHours() + " : " + clock.getMinutes());
+            }
             setInterval(setTime,1000);
         });
 
