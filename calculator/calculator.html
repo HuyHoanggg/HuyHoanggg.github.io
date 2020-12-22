@@ -21,7 +21,7 @@
     <div id="calculator">
         <div class="time"></div>
         <div>
-            <button id="mode" onclick="switchTheme()">Light Mode 🌙</button>
+            <button id="mode">Light Mode 🌙</button>
         </div>
         <div id="display"></div>
         <table>
@@ -69,13 +69,13 @@
             $('table button.equal').attr('disabled',true);
         });
 
-        //Set thời gian
-        $(function setTime(){
-            $('#calculator .time').html((new Date()).getHours() + " : " + (new Date().getMinutes()));
-            setInterval(setTime,1000);
-        });
+        // //Set thời gian
+        // $(function setTime(){
+        //     $('#calculator .time').html((new Date()).getHours() + " : " + (new Date().getMinutes()));
+        //     setInterval(setTime,1000);
+        // });
 
-        setTime();
+        // setTime();
         
 
         //Thực hiện các hành động bên trong khi ấn vào các nút số, phép tính, dấu '.'
