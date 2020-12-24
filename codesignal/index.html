@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CODESIGNAL EXERCISE</title>
+</head>
+<body>
+    <script>
+        // Bài 4
+        function adjacentElementsProduct(inputArray) {
+            let max = -Infinity;
+            for (let i = 1; i < inputArray.length; i++) {
+                max = Math.max(inputArray[i] * inputArray[i - 1]);
+            }
+
+            return max;
+        }
+
+        // function adjacentElementsProduct(inputArray) {
+        //     let product = 0;
+        //     let arr = [];
+            
+        //     for (let i=1; i<inputArray.length; i++){
+        //         product = inputArray[i] * inputArray[i-1];
+        //         arr.push(product);
+        //     }
+            
+        //     let max = arr[0];
+        //     for(let j=1; j<arr.length;j++){
+        //         if ( max < arr[j]){
+        //             max = arr[j];
+        //         }
+        //     }
+        //     return max;
+        // }
+        
+        //Bai 6
+        function makeArrayConsecutive2(statues) {
+            let min = Math.min(...statues);
+            let max = Math.max(...statues);
+            let arr = [];
+            for (let i = min + 1; i < max; i++){
+                arr.push(i);
+            }
+            let result = [];
+            for (let i = 0; i< arr.length; i++){
+                if( statues.indexOf(arr[i]) == -1){
+                    result.push(arr[i]);
+                }
+            }
+            return result.length;
+        }
+
+
+        //Bai 7
+        function almostIncreasingSequence(sequence) {
+            let arr = [];
+            for(let i = 0; i < sequence.length - 1; i++){
+                if(sequence[i] >= sequence[i+1]){
+                    arr.push(sequence[i]);
+                }
+            }
+
+            for(let i = 0; i < sequence.length - 2; i++){
+                if(sequence[i] >= sequence[i+1] && sequence[i] >= sequence[i+2]){
+                    return false;
+                }
+            }
+
+            let arr1 = [];
+            let abc = sequence.sort();
+            for(let i = 0; i < abc.length-1; i++){
+                if(abc[i] == abc[i+1]){
+                    arr1.push(abc[i]);
+                }
+            }
+
+            if(arr.length > 1 || arr1.length > 1){
+                return false;
+            }
+            else if (arr.length <2 && arr1.length <2){
+                return true;
+            }
+        }
+
+        
+    </script>
+</body>
+</html>

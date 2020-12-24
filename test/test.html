@@ -1,83 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        *{
-            margin: 0;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <style>
+    *{
+      box-sizing: border-box;
+    }
+    h1{
+      text-align: center;
+    }
 
-        .grid{
-            margin-left: 5px;
-        }
+    .container{
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-column-gap: 40px;
+      grid-row-gap: 40px;
+      position: relative;
+      left: 50%;
+      transform: translate(-50%);
+    }
 
-        .grid-item{
-            width: calc(100%/3 - 5px);
-        }
-
-        .grid-item>img{
-            max-width: 100%;
-        }
-        
-    </style>
+    .circle{
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      position: relative;
+      left: 50%;
+      transform: translate(-50%);
+    }
+    
+    .border{
+      border: 2px solid green;
+    }
+  </style>
 </head>
 <body>
-    <div class="grid">
-        <div class="grid-item">
-            <img
-              src="http://www.marklobo.com.au/news/wp-content/uploads/2013/03/Melbourne_Portrait_Photographer_Mark_Lobo-Cowboy.jpg"
-            />
-          </div>
-    
-          <div class="grid-item">
-            <img
-              src="https://format-com-cld-res.cloudinary.com/image/private/s--PcYqe7Zw--/c_limit,g_center,h_65535,w_960/a_auto,fl_keep_iptc.progressive,q_95/145054-8576001-Rob-Green-by-Zuzana-Breznanikova_7725_b_w.jpg"
-            />
-          </div>
-    
-          <div class="grid-item">
-            <img
-              src="http://www.iefimerida.gr/sites/default/files/janbanning11.jpg"
-            />
-          </div>
-    
-          <div class="grid-item">
-            <img
-              src="https://s-media-cache-ak0.pinimg.com/736x/66/bb/e7/66bbe7acc0d64da627afef440a29714b--portrait-photos-female-portrait.jpg"
-            />
-          </div>
-    
-          <div class="grid-item">
-            <img
-              src="https://s-media-cache-ak0.pinimg.com/736x/25/34/b6/2534b6c18c659546463f13b2dc62d4ce--natural-portraits-female-portraits.jpg"
-            />
-          </div>
-          <div class="grid-item">
-            <img
-              src="http://www.marklobo.com.au/news/wp-content/uploads/2013/03/Melbourne_Portrait_Photographer_Mark_Lobo-Cowboy.jpg"
-            />
-          </div>
-    </div>
+  <h1>Popular color</h1>
+  <div class="container">
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+  </div>
+  <script>
+    let colors = ['#CCCCCC', '#FF0000', '#FF6600', '#336699', '#666666', '#003366', '#000000', '#FFCC00'];
 
-    
+    $(function(){
+      for (let i = 0; i< colors.length; i++){
+        $($('.circle')[i]).css('background-color', colors[i]);
+      }
+    });
 
-    <!-- Step 1: Let's start by loading jQuery. jQuery is not required for masonary to function but makes things easier  -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    // $('.circle').click(function(){
+    //     this.remove();
+    // })
 
-    <!-- Step 2: Then load imagesloaded. imagesloaded makes sure the images are not displayed until they are fully loaded -->
-    <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
-
-    <!-- Step 3: we load masonry -->
-    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
-    <script>
-        $(".grid").imagesLoaded(function () {
-          $(".grid").masonry({
-            itemSelector: ".grid-item",
-            gutter: 5
-          });
-        });
-      </script>
+    $('.circle').click(function(){
+      $(this).toggleClass('border');
+    })
+  </script>
 </body>
 </html>

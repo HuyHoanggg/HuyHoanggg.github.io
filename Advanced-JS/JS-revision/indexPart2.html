@@ -172,6 +172,18 @@
             return result;
         }
 
+        function test(m,n){
+            let result = [];
+            for(let i = 0; i<m; i++){
+                let subArr = [];
+                for(let j = 1; j<=n; j++){
+                    subArr.push(n*i + j);
+                }
+                result.push(subArr);
+            }
+            return result;
+        }
+
         // Bài 4: Cho 1 mảng các object chứa thông tin sinh viên dạng { name: ''Huy'', gender: ''Male'', age: 20 }. Viết hàm tính ra số tuổi trung bình của toàn bộ sinh viên.
         
         function ageAverage(arr){
