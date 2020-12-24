@@ -34,6 +34,36 @@
         i, .list-inline-item>button>i{
             font-size: 14px;
         }
+
+        @media (max-width: 996px){
+            .name{
+                width: 120px;
+            }
+        }
+
+        @media (max-width: 768px){
+            .container{
+                padding: 0;
+            }
+
+            .name{
+                width: 90px;
+            }
+
+            .email{
+                width: 100px;
+            }
+
+            .res{
+                display: none;
+            }
+
+            .phone{
+                width: 80px;
+            }
+        }
+
+        
     </style>
 </head>
 
@@ -45,10 +75,10 @@
         <table class="table table-striped table-hover">
             <thead>
                 <tr>
-                    <th>Họ tên</th>
-                    <th>Năm sinh</th>
-                    <th>Email</th>
-                    <th>Số điện thoại</th>
+                    <th class="name">Họ tên</th>
+                    <th class="dob">Năm sinh</th>
+                    <th class="email">Email</th>
+                    <th class="phone">Số điện thoại</th>
                     <th></th>
                 </tr>
             </thead>
@@ -62,11 +92,11 @@
                         <ul class="list-inline m-0 text-center">
                             <li class="list-inline-item">
                                 <button class="btn btn-primary btn-sm" type="button" title="Chỉnh sửa"><i
-                                        class="fa fa-edit"></i> Chỉnh sửa</button>
+                                        class="fa fa-edit"></i><span class="res"> Chỉnh sửa</span></button>
                             </li>
                             <li class="list-inline-item">
                                 <button class="btn btn-danger btn-sm" type="button" title="Xóa"><i
-                                        class="fa fa-trash"></i> Xóa</button>
+                                        class="fa fa-trash"></i><span class="res"> Xóa</span></button>
                             </li>
                         </ul>
                     </td>
@@ -80,11 +110,11 @@
                         <ul class="list-inline m-0 text-center">
                             <li class="list-inline-item">
                                 <button class="btn btn-primary btn-sm" type="button" title="Chỉnh sửa"><i
-                                        class="fa fa-edit"></i> Chỉnh sửa</button>
+                                        class="fa fa-edit"></i><span class="res"> Chỉnh sửa</span></button>
                             </li>
                             <li class="list-inline-item">
                                 <button class="btn btn-danger btn-sm" type="button" title="Xóa"><i
-                                        class="fa fa-trash"></i> Xóa</button>
+                                        class="fa fa-trash"></i><span class="res"> Xóa</span></button>
                             </li>
                         </ul>
                     </td>
@@ -98,11 +128,11 @@
                         <ul class="list-inline m-0 text-center">
                             <li class="list-inline-item">
                                 <button class="btn btn-primary btn-sm" type="button" title="Chỉnh sửa"><i
-                                        class="fa fa-edit"></i> Chỉnh sửa</button>
+                                        class="fa fa-edit"></i><span class="res"> Chỉnh sửa</span></button>
                             </li>
                             <li class="list-inline-item">
                                 <button class="btn btn-danger btn-sm" type="button" title="Xóa"><i
-                                        class="fa fa-trash"></i> Xóa</button>
+                                        class="fa fa-trash"></i><span class="res"> Xóa</span></button>
                             </li>
                         </ul>
                     </td>
