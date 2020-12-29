@@ -19,7 +19,30 @@
     <!-- Jquery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-    <link rel="stylesheet" href="style.css">
+    <style>
+        h1 {
+            text-align: center;
+            margin: 20px 0px 40px;
+        }
+
+        #validate{
+          color: red;
+          text-align: center;
+        }
+
+        span{
+            color: red;
+        }
+
+        i {
+            font-size: 14px;
+        }
+
+        .form-group{
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+    </style>
 </head>
 
 <body>
@@ -60,7 +83,29 @@
           </form>
     </div>
 
-    <script src="script.js"></script>
+    <script>
+    $('#save').click(function(){
+      if($('#name').val() == '' || $('#email').val() == '' || $('#phone').val()==''){
+        $('#validate').html('Hãy điền đầy đủ thông tin');
+      }
+      else{
+      $.ajax({
+        method:"POST",
+        url: "https://ohsehun.herokuapp.com/users",
+        data: {
+          name: $('#name').val(),
+          birthday: $('#dob').val(),
+          email: $('#email').val(),
+          phone: $('#phone').val()
+        },
+      });
+      location.href = 'index.html';}
+      // window.location.href = 'index.html';
+      // $(location).attr("href", "index.html")
+      // window.location.replace("index.html");
+    })
+
+    </script>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"
         integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU"

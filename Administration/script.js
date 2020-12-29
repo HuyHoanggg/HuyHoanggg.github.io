@@ -42,23 +42,3 @@ function delStudent(id){
     location.href = "index.html";
 }
 
-$('#save').click(function(){
-    if($('#name').val() == '' || $('#email').val() == '' || $('#phone').val()==''){
-      $('#validate').html('Hãy điền đầy đủ thông tin');
-    }
-    else{
-    $.ajax({
-      method:"POST",
-      url: "https://ohsehun.herokuapp.com/users",
-      data: {
-        name: $('#name').val(),
-        birthday: $('#dob').val(),
-        email: $('#email').val(),
-        phone: $('#phone').val()
-      },
-    });
-    location.href = 'index.html';}
-    // window.location.href = 'index.html';
-    // $(location).attr("href", "index.html")
-    // window.location.replace("index.html");
-  })
