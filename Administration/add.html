@@ -16,10 +16,18 @@
     <!-- font-awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
 
+    <!-- Jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
     <style>
         h1 {
             text-align: center;
             margin: 20px 0px 40px;
+        }
+
+        #validate{
+          color: red;
+          text-align: center;
         }
 
         span{
@@ -40,7 +48,8 @@
 <body>
     <div class="container">
         <h1>Thêm mới học viên</h1>
-        <form>
+        <p id="validate"></p>
+        <form method="POST">
             <div class="form-group row">
               <label for="name" class="col-sm-2 col-form-label">Họ tên <span>*</span></label>
               <div class="col-sm-10">
@@ -50,7 +59,7 @@
             <div class="form-group row">
               <label for="dob" class="col-sm-2 col-form-label">Năm sinh</label>
               <div class="col-sm-10">
-                <input type="number" class="form-control" id="dob" placeholder="Năm sinh">
+                <input type="text" class="form-control" id="dob" placeholder="Năm sinh">
               </div>
             </div>
             <div class="form-group row">
@@ -68,11 +77,35 @@
             <div class="form-group row">
               <div class="text-center">
                 <a href="index.html"><button type="button" class="btn btn-secondary"><i class="fas fa-chevron-left"></i> Quay lại</button></a>
-                <button type="submit" class="btn btn-success"><i class="fas fa-save"></i> Lưu</button>
+                <button id="save" type="button" class="btn btn-success"><i class="fas fa-save"></i> Lưu</button>
               </div>
             </div>
           </form>
     </div>
+
+    <script>
+    $('#save').click(function(){
+      if($('#name').val() == '' || $('#email').val() == '' || $('#phone').val()==''){
+        $('#validate').html('Hãy điền đầy đủ thông tin');
+      }
+      else{
+      $.ajax({
+        method:"POST",
+        url: "https://ohsehun.herokuapp.com/users",
+        data: {
+          name: $('#name').val(),
+          birthday: $('#dob').val(),
+          email: $('#email').val(),
+          phone: $('#phone').val()
+        },
+      });
+      location.href = 'index.html';}
+      // window.location.href = 'index.html';
+      // $(location).attr("href", "index.html")
+      // window.location.replace("index.html");
+    })
+
+    </script>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"
         integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU"

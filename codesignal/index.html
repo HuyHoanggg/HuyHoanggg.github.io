@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CODESIGNAL EXERCISE</title>
 </head>
+
 <body>
     <script>
         // Bài 4
@@ -20,12 +22,12 @@
         // function adjacentElementsProduct(inputArray) {
         //     let product = 0;
         //     let arr = [];
-            
+
         //     for (let i=1; i<inputArray.length; i++){
         //         product = inputArray[i] * inputArray[i-1];
         //         arr.push(product);
         //     }
-            
+
         //     let max = arr[0];
         //     for(let j=1; j<arr.length;j++){
         //         if ( max < arr[j]){
@@ -34,57 +36,128 @@
         //     }
         //     return max;
         // }
-        
+
         //Bai 6
+        // function makeArrayConsecutive2(statues) {
+        //     let min = Math.min(...statues);
+        //     let max = Math.max(...statues);
+        //     let arr = [];
+        //     for (let i = min + 1; i < max; i++) {
+        //         arr.push(i);
+        //     }
+        //     let result = [];
+        //     for (let i = 0; i < arr.length; i++) {
+        //         if (statues.indexOf(arr[i]) == -1) {
+        //             result.push(arr[i]);
+        //         }
+        //     }
+        //     return result.length;
+        // }
+
         function makeArrayConsecutive2(statues) {
-            let min = Math.min(...statues);
-            let max = Math.max(...statues);
-            let arr = [];
-            for (let i = min + 1; i < max; i++){
-                arr.push(i);
-            }
-            let result = [];
-            for (let i = 0; i< arr.length; i++){
-                if( statues.indexOf(arr[i]) == -1){
-                    result.push(arr[i]);
-                }
-            }
-            return result.length;
+            return Math.max(...statues) - Math.min(...statues) - statues.length + 1;
         }
 
 
         //Bai 7
         function almostIncreasingSequence(sequence) {
             let arr = [];
-            for(let i = 0; i < sequence.length - 1; i++){
-                if(sequence[i] >= sequence[i+1]){
+            for (let i = 0; i < sequence.length - 1; i++) {
+                if (sequence[i] >= sequence[i + 1]) {
                     arr.push(sequence[i]);
                 }
             }
 
-            for(let i = 0; i < sequence.length - 2; i++){
-                if(sequence[i] >= sequence[i+1] && sequence[i] >= sequence[i+2]){
+            for (let i = 0; i < sequence.length - 2; i++) {
+                if (sequence[i] >= sequence[i + 1] && sequence[i] >= sequence[i + 2]) {
                     return false;
                 }
             }
 
             let arr1 = [];
             let abc = sequence.sort();
-            for(let i = 0; i < abc.length-1; i++){
-                if(abc[i] == abc[i+1]){
+            for (let i = 0; i < abc.length - 1; i++) {
+                if (abc[i] == abc[i + 1]) {
                     arr1.push(abc[i]);
                 }
             }
 
-            if(arr.length > 1 || arr1.length > 1){
+            if (arr.length > 1 || arr1.length > 1) {
                 return false;
             }
-            else if (arr.length <2 && arr1.length <2){
+            else if (arr.length < 2 && arr1.length < 2) {
                 return true;
             }
         }
 
-        
+        //Bai 8
+        function matrixElementsSum(matrix) {
+            let sum = 0;
+                
+            for (let i=0; i < matrix.length; i++){
+                for (let j=0; j < matrix[i].length; j++){
+                if (matrix[i][j] === 0) {
+                    for (let k=i+1; k < matrix.length; k++){
+                    matrix[k][j] = 0;
+                    }
+                }
+                }
+            }
+                
+            for (let i=0; i<matrix.length; i++){
+                for (let j=0; j<matrix[i].length; j++){
+                sum += matrix[i][j]
+                }
+            }
+            return sum;
+        }
+
+        //Bai 10
+        function commonCharacterCount(s1, s2) {
+            let count = 0;
+            for(let i = 0; i<s1.length; i++){
+                if(s2.includes(s1[i])){
+                    count++;
+                    s2 = s2.replace(s1[i],"");
+                }
+            }
+            return count;
+        }
+
+        //Bai 11
+        function isLucky(n) {
+
+            n = n.toString().split('');
+
+            let a = n.slice(0,n.length/2);
+            let b = n.slice(n.length/2);
+            let sum1 = 0;
+            let sum2 = 0;
+
+            for(let i = 0; i< a.length; i++){
+                sum1 += parseInt(a[i]);
+            }
+
+            for(let j = 0; j<b.length; j++){
+                sum2 += parseInt(b[j]);
+            }
+
+            if(sum1 == sum2){
+                return true;
+            }
+            else{
+                return false;
+            }
+        }
+
+        //Bai tap ve hinh
+        function vehcn(a,b){
+            for(let i = 0; i< b; i++){
+                
+            }
+        }
+
     </script>
 </body>
+
 </html>
