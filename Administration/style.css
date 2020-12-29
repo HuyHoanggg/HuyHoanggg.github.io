@@ -1,0 +1,73 @@
+h1 {
+    text-align: center;
+    margin: 20px 0px 40px;
+}
+
+table>thead {
+    background-color: #333A40;
+    color: white;
+}
+
+a>button {
+    margin-bottom: 15px;
+}
+
+tbody, table>thead{
+    vertical-align: middle !important;
+}
+
+i, .list-inline-item>button>i{
+    font-size: 14px;
+}
+
+#validate{
+    color: red;
+    text-align: center;
+}
+
+span{
+    color: red;
+}
+
+i{
+    font-size: 14px;
+}
+
+.form-group{
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+@media (max-width: 996px){
+    .name{
+        width: 120px;
+    }
+}
+
+@media (max-width: 768px){
+    .container{
+        padding: 0;
+    }
+
+    .name{
+        width: 90px;
+    }
+
+    .email{
+        width: 100px;
+    }
+
+    .res{
+        display: none;
+    }
+
+    .phone{
+        width: 80px;
+    }
+}
+
+@media (max-width: 554px){
+    .list-inline-item:not(:last-child){
+        margin-right: 0;
+    }
+}
