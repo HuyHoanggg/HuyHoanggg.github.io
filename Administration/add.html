@@ -98,11 +98,15 @@
           email: $('#email').val(),
           phone: $('#phone').val()
         },
-      });
-      location.href = 'index.html';}
+      })
+      .done(function(){
+        alert('Success!')
+        location.href = 'index.html';
+      })
       // window.location.href = 'index.html';
       // $(location).attr("href", "index.html")
       // window.location.replace("index.html");
+    }
     })
 
     </script>

@@ -154,7 +154,6 @@
     </div>
 
     <script>
-        function renderStudents(){
             $.ajax({
             method: "GET",
             url: "https://ohsehun.herokuapp.com/users"
@@ -184,7 +183,6 @@
 
             $('tbody').html(list);
         });
-        }
         
         
         function delStudent(id){
@@ -194,8 +192,8 @@
             })
             .done(function(){
                 $('this').remove();
+                window.location.href = "index.html";
             })
-            location.href = "index.html";
         }
     </script>
 
