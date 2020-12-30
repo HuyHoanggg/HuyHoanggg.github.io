@@ -5,7 +5,7 @@ $(() => {
 function renderStudents(){
     $.ajax({
     method: "GET",
-    url: "http://localhost:3000/users"
+    url: "https://ohsehun.herokuapp.com/users"
     })
     .done(function( data ) {
         let list = '';
@@ -39,11 +39,11 @@ function delStudent(id){
     if(res == true){
         $.ajax({
             method: "DELETE",
-            url: `http://localhost:3000/users/${id}`,
+            url: `https://ohsehun.herokuapp.com/users/${id}`,
         })
         .done(function(){
             $(this).remove();
-            alert("Delete student successfully!");
+            alert("Xóa thành công");
             window.location.href = "index.html";
         })
     }else{
@@ -57,7 +57,7 @@ function editStudent(id){
     if(res == true){
         $.ajax({
             method: "PUT",
-            url: `http://localhost:3000/users/${id}`,
+            url: `https://ohsehun.herokuapp.com/users/${id}`,
             data: {
                 name: $(`#name${id}`).html(),
                 birthday: $(`#dob${id}`).html(),
@@ -65,7 +65,7 @@ function editStudent(id){
                 phone: $(`#phone${id}`).html(),
             }
         });
-        window.location.href = 'index.html';
+        alert("Chỉnh sửa thành công!")
     }
     else{
         window.location.href = 'index.html';
@@ -75,12 +75,12 @@ function editStudent(id){
 
 $('#save').click(function(){
     if($('#name').val() == '' || $('#email').val() == '' || $('#phone').val()==''){
-      $('#validate').html('Hãy điền đầy đủ thông tin');
+      $('#validate').html('Hãy điền đầy đủ thông tin!');
     }
     else{
     $.ajax({
       method:"POST",
-      url: "http://localhost:3000/users",
+      url: "https://ohsehun.herokuapp.com/users",
       data: {
         name: $('#name').val(),
         birthday: $('#dob').val(),
@@ -89,7 +89,7 @@ $('#save').click(function(){
       },
     })
     .done(function(){
-      alert('Success!')
+      alert('Thêm học viên thành công!')
       window.location.href = 'index.html';
     })
     // window.location.href = 'index.html';
