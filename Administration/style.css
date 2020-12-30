@@ -1,6 +1,47 @@
+.load{
+    margin: 0;
+    position: absolute;
+    z-index: 11 !important;
+    background-color: black;
+    opacity: 0.7;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: none;
+}
+
+.load .circle{
+    width: 50px;
+	height: 50px;
+	border: 3px solid #f3f3f3;
+	border-top: 3px solid #f25a4100;
+	border-radius: 100%;
+	position: absolute;
+	top:0;
+	bottom:0;
+	left:0;
+	right: 0;
+	margin: auto;
+    
+	animation: spin 1s infinite linear;
+		
+}
+
+@keyframes spin {
+	from{
+		transform: rotate(0deg);
+        }
+        to
+        {
+			transform: rotate(360deg); opacity:0;
+		}
+}
+
+
 h1 {
     text-align: center;
-    margin: 20px 0px 40px;
+    margin-bottom: 40px !important;
+    padding-top: 20px ;
 }
 
 table>thead {

@@ -3,11 +3,17 @@ $(() => {
 });
 
 function renderStudents(){
+
+    $('.load').css('display','block');
+
     $.ajax({
     method: "GET",
     url: "https://ohsehun.herokuapp.com/users"
     })
     .done(function( data ) {
+
+        $('.load').css('display','none');
+
         let list = '';
 
         for (let i = 0; i < data.length; i++) {
@@ -43,7 +49,6 @@ function delStudent(id){
         })
         .done(function(){
             $(this).remove();
-            alert("Xóa thành công");
             window.location.href = "index.html";
         })
     }else{
@@ -68,7 +73,7 @@ function editStudent(id){
         alert("Chỉnh sửa thành công!")
     }
     else{
-        window.location.href = 'index.html';
+        renderStudents();
     }
 }
 
