@@ -20,22 +20,22 @@ i, .list-inline-item>button>i{
     font-size: 14px;
 }
 
+.form-group>label>span{
+    color: red;
+}
+
 #validate{
     color: red;
     text-align: center;
 }
 
-span{
-    color: red;
-}
-
-i{
-    font-size: 14px;
-}
-
 .form-group{
     margin-top: 15px;
     margin-bottom: 15px;
+}
+
+.form-group>.text-center>a>button{
+    margin-bottom: 0px;
 }
 
 @media (max-width: 996px){

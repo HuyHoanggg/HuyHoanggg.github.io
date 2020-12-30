@@ -1,24 +1,28 @@
+$(() => {
+    renderStudents();
+});
+
 function renderStudents(){
     $.ajax({
     method: "GET",
-    url: "https://ohsehun.herokuapp.com/users"
+    url: "http://localhost:3000/users"
     })
     .done(function( data ) {
         let list = '';
 
         for (let i = 0; i < data.length; i++) {
-            list += `<tr><td> ${data[i].name}</td>
-                        <td>${data[i].birthday}</td>
-                        <td>${data[i].email}</td>
-                        <td>${data[i].phone}</td>
+            list += `<tr><td id="name${data[i].id}" contenteditable> ${data[i].name}</td>
+                        <td id="dob${data[i].id}" contenteditable>${data[i].birthday}</td>
+                        <td id="email${data[i].id}" contenteditable>${data[i].email}</td>
+                        <td id="phone${data[i].id}" contenteditable>${data[i].phone}</td>
                         <td>
                             <ul class="list-inline m-0 text-center">
                                 <li class="list-inline-item">
-                                    <button id="edit" class="btn btn-primary btn-sm" type="button" title="Chỉnh sửa"><i
+                                    <button id="edit" onclick="editStudent(${data[i].id})" class="btn btn-primary btn-sm" type="button" title="Chỉnh sửa"><i
                                     class="fa fa-edit"></i><span class="res"> Chỉnh sửa</span></button>
                                 </li>
                                 <li class="list-inline-item">
-                                    <button id="${data[i].id}" onclick="delStudent(${data[i].id})" class="btn btn-danger btn-sm" type="button" title="Xóa"><i
+                                    <button onclick="delStudent(${data[i].id})" class="btn btn-danger btn-sm" type="button" title="Xóa"><i
                                     class="fa fa-trash"></i><span class="res"> Xóa</span></button>
                                 </li>
                             </ul>
@@ -27,18 +31,69 @@ function renderStudents(){
         }
 
     $('tbody').html(list);
-});
+    });
+}
+    
+function delStudent(id){
+    let res = confirm("Bạn có thực sự muốn xóa học viên này không?")
+    if(res == true){
+        $.ajax({
+            method: "DELETE",
+            url: `http://localhost:3000/users/${id}`,
+        })
+        .done(function(){
+            $(this).remove();
+            alert("Delete student successfully!");
+            window.location.href = "index.html";
+        })
+    }else{
+        window.location.href = "index.html";
+    }
 }
 
 
-function delStudent(id){
+function editStudent(id){
+    let res = confirm("Bạn có muốn lưu thông tin đã thay đổi không?")
+    if(res == true){
+        $.ajax({
+            method: "PUT",
+            url: `http://localhost:3000/users/${id}`,
+            data: {
+                name: $(`#name${id}`).html(),
+                birthday: $(`#dob${id}`).html(),
+                email: $(`#email${id}`).html(),
+                phone: $(`#phone${id}`).html(),
+            }
+        });
+        window.location.href = 'index.html';
+    }
+    else{
+        window.location.href = 'index.html';
+    }
+}
+
+
+$('#save').click(function(){
+    if($('#name').val() == '' || $('#email').val() == '' || $('#phone').val()==''){
+      $('#validate').html('Hãy điền đầy đủ thông tin');
+    }
+    else{
     $.ajax({
-        method: "DELETE",
-        url: `https://ohsehun.herokuapp.com/users/${id}`,
+      method:"POST",
+      url: "http://localhost:3000/users",
+      data: {
+        name: $('#name').val(),
+        birthday: $('#dob').val(),
+        email: $('#email').val(),
+        phone: $('#phone').val()
+      },
     })
     .done(function(){
-        $('this').remove();
+      alert('Success!')
+      window.location.href = 'index.html';
     })
-    location.href = "index.html";
-}
-
+    // window.location.href = 'index.html';
+    // $(location).attr("href", "index.html")
+    // window.location.replace("index.html");
+  }
+})
