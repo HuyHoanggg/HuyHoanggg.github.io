@@ -62,3 +62,8 @@ function addEventDeleteStudent() {
 function deleteStudent(id) {
   alert("Xoa student id = " + id);
 }
+
+
+function realDel(){
+  
+}

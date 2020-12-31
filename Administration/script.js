@@ -51,8 +51,6 @@ function delStudent(id){
             $(this).remove();
             window.location.href = "index.html";
         })
-    }else{
-        window.location.href = "index.html";
     }
 }
 
@@ -71,6 +69,7 @@ function editStudent(id){
             }
         });
         alert("Chỉnh sửa thành công!")
+        renderStudents();
     }
     else{
         renderStudents();
