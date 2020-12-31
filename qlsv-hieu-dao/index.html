@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <title>Student Form</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="list-table">
+        <div class="table-title">Danh sách học viên</div>
+        <div class="add-btn">
+          <a href="form.html"
+            ><button>
+              <i class="add-student-btn fa fa-plus-circle"></i> Thêm học viên
+            </button></a
+          >
+        </div>
+
+        <div class="delete-form">
+          <div class="delete-form-text">
+            <p>Are you sure you want to delete?</p>
+          </div>
+
+          <div class="delete-group-btn">
+            <button class="confirm-btn" onclick="realDelete()">Yes</button>
+            <button class="cancel-btn" onclick="cancelDelete()">Cancel</button>
+          </div>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <td>Họ tên</td>
+              <td>Năm sinh</td>
+              <td>Email</td>
+              <td>Số Điện Thoại</td>
+              <td></td>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+      $(() => {
+        renderStudents();
+      });
+
+      function renderStudents() {
+        // Bật loading
+        $("table").after(
+          $(
+            `<img class="loading" src="https://media2.giphy.com/media/y1ZBcOGOOtlpC/giphy.gif?cid=ecf05e47o6bj4jluy5j6s4hkce3dyoosfq79yihy82bqblxk&rid=giphy.gif"/>`
+          )
+        );
+
+        $.ajax({
+          method: "GET",
+          url: "https://gibson-test-database.herokuapp.com/users",
+        }).done(function (data) {
+          //đã thực hiện xong request
+          //tắt loading ................
+          $(".loading").remove();
+
+          //render giao diện dựa vào data lấy đc
+          student = data;
+          for (i = 0; i < student.length; i++) {
+            ele = $(`
+                <tr>
+                    <td>${student[i].name}</td>
+                    <td>${student[i].birthday}</td>
+                    <td>${student[i].email}</td>
+                    <td>${student[i].phone}</td>
+                    <td><a href="edit.html?id=${student[i].id}" class="edit-text"><i class="fa fa-edit"></i> Chỉnh Sửa</a> | <a
+                        class="delete-text" onclick="deleteStudent(${student[i].id})"><i class="fa fa-trash-o"></i> Xóa</a></td>
+                </tr>
+                `);
+            $("tbody").append(ele);
+          }
+        });
+      }
+      let currentId = null;
+      function deleteStudent(id) {
+        // Bật hộp thoại confirm
+        $(".delete-form").css("display", "flex");
+        currentId = id;
+        // $(".confirm-btn").click(() => {
+        //   $.ajax({
+        //     method: "DELETE",
+        //     url: `https://gibson-test-database.herokuapp.com/users/${id}`,
+        //   }).done(() => {
+        //     $("tbody").html("");
+        //     renderStudents();
+        //     //update Dom
+        //   });
+
+        //   $(".delete-form").css("display", "none");
+        // });
+
+        // $(".cancel-btn").click(() => {
+        //   $(".delete-form").css("display", "none");
+        // });
+      }
+
+      function realDelete() {
+        // let currentId = ;
+        $(".confirm-btn").click(() => {
+          $.ajax({
+            method: "DELETE",
+            url: `https://gibson-test-database.herokuapp.com/users/${currentId}`,
+          }).done(() => {
+            $("tbody").html("");
+            renderStudents();
+            //update Dom
+          });
+        });
+      }
+
+      function cancelDelete() {
+        $(".delete-form").css("display", "none");
+      }
+    </script>
+  </body>
+</html>
