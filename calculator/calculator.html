@@ -6,7 +6,7 @@
     <title>Calculator</title>
 
     <link rel="stylesheet" href="light.css" id="theme">
-    
+
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <!-- font-awesome -->
@@ -173,8 +173,8 @@
             }else{
                 $('.time').html(clock.getHours() + " : " + clock.getMinutes());
             }
-            setTimeout(setTime,1000);
         });
+        setInterval(setTime,1000);
         
     </script>
 </body>
