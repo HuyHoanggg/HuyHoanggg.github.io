@@ -64,92 +64,92 @@
     <script>
         //Khi mới load trang xong, vì chưa có số nào trên màn hình nên sẽ không ấn được dấu "x", "÷", "="
         $(function(){
-            $('table button.multi').attr('disabled',true);
-            $('table button.divide').attr('disabled',true);
-            $('table button.equal').attr('disabled',true);
+            $('.multi').attr('disabled',true);
+            $('.divide').attr('disabled',true);
+            $('.equal').attr('disabled',true);
         });
 
         //Thực hiện các hành động bên trong khi ấn vào các nút số, phép tính, dấu '.'
-        $('table button.number, table button.option, table button.dot').on('click', function(){
+        $('.number, .option, .dot').on('click', function(){
             char = $(this).html(); //Lấy giá trị vừa click
-            result = $('#calculator #display').html(); //Lấy chuỗi giá trị trong ô phép tính
-            $('#calculator #display').html(result + char); //Thêm giá trị vừa click vào ô giá trị hiện tại
-            $('table button.equal').removeAttr('disabled'); //bỏ vô hiệu hóa dấu =
-            $('table button.option').removeAttr('disabled'); //bỏ vô hiệu hóa phép toán
+            result = $('#display').html(); //Lấy chuỗi giá trị trong ô phép tính
+            $('#display').html(result + char); //Thêm giá trị vừa click vào ô giá trị hiện tại
+            $('.equal').removeAttr('disabled'); //bỏ vô hiệu hóa dấu =
+            $('.option').removeAttr('disabled'); //bỏ vô hiệu hóa phép toán
         });
 
         //Khi click vào dấu x thì sẽ không click tiếp dấu x nữa, cũng ko click đc dấu "÷"
-        $('table button.multi').on('click', function(){
-            $('table button.multi').attr('disabled',true);
-            $('table button.divide').attr('disabled',true);
+        $('.multi').on('click', function(){
+            $('.multi').attr('disabled',true);
+            $('.divide').attr('disabled',true);
         });
 
         //Tương tự bên trên
-        $('table button.divide').on('click',function(){
-            $('table button.divide').attr('disabled',true);
-            $('table button.multi').attr('disabled',true);
+        $('.divide').on('click',function(){
+            $('.divide').attr('disabled',true);
+            $('.multi').attr('disabled',true);
         });
 
         //Khi ấn nút AC thì ô giá trị sẽ hiện rỗng
-        $('table button.clean').on('click', function(){
-            $('#calculator #display').html("");
+        $('.clean').on('click', function(){
+            $('#display').html("");
         });
 
         //Khi ấn nút xóa, sẽ xóa từng phần tử 1
-        $('table button.undo').on('click', function(){
-            result = $('#calculator #display').html();
-            $('#calculator #display').html(result.substring(0, result.length - 1));
+        $('.undo').on('click', function(){
+            result = $('#display').html();
+            $('#display').html(result.substring(0, result.length - 1));
         });
 
         //Thực hiện phép tính %
-        $('table button.percent').on('click', function(){
-            result = $('#calculator #display').html();
-            $('#calculator #display').html(result / 100);
+        $('.percent').on('click', function(){
+            result = $('#display').html();
+            $('#display').html(result / 100);
         });
 
         //Thực hiện phép tính mũ 2
-        $('table button.square').on('click', function(){
-            result = $('#calculator #display').html();
+        $('.square').on('click', function(){
+            result = $('#display').html();
             if(result == ''){
-                $('#calculator #display').html(0);
+                $('#display').html(0);
             }else{
-               $('#calculator #display').html(result * result); 
+               $('#display').html(result * result); 
             }
         });
 
         //Thực hiện phép tính căn bậc 2
-        $('table button.sqrt').on('click',function(){
-            result = $('#calculator #display').html();
-            $('#calculator #display').html(Math.sqrt(result)); 
+        $('.sqrt').on('click',function(){
+            result = $('#display').html();
+            $('#display').html(Math.sqrt(result)); 
         });
 
 
         //Thực hiện phép tính giai thừa
-        $('table button.giaithua').on('click',function(){
-            result = $('#calculator #display').html();
+        $('.giaithua').on('click',function(){
+            result = $('#display').html();
             if(result < 0){
-                $('#calculator #display').html('Error!');
+                $('#display').html('Error!');
             }else if(result == 0){
-                $('#calculator #display').html(1);
+                $('#display').html(1);
             }else{
                 let res = 1;
                 for (let i = 1; i <= result; i++) {
                     res = res * i;
                 }
-                $('#calculator #display').html(res);
+                $('#display').html(res);
             }
         })
 
         //Thực thi kết quả trong ô giá trị, thay thế x = *, ÷ = /
-        $('table button.equal').on('click', function(){
-            result = $('#calculator #display').html();
+        $('.equal').on('click', function(){
+            result = $('#display').html();
             result = result.replaceAll("×" , "*");
             result = result.replaceAll("÷" , "/");
-            $('#calculator #display').html(eval(result));
+            $('#display').html(eval(result));
         });
 
         //Thay đổi theme 
-        $('#calculator button#mode').click(function(){
+        $('#mode').click(function(){
 
             if ($('#theme').attr("href") == "light.css")
             {
@@ -167,13 +167,13 @@
         $(function setTime(){
             let clock = new Date();
             if (clock.getMinutes() < 10){
-                $('#calculator .time').html(clock.getHours() + " : " + "0" + clock.getMinutes());
+                $('.time').html(clock.getHours() + " : " + "0" + clock.getMinutes());
             }else if (clock.getMinutes() == 0){
-                $('#calculator .time').html(clock.getHours() + " : 00");
+                $('.time').html(clock.getHours() + " : 00");
             }else{
-                $('#calculator .time').html(clock.getHours() + " : " + clock.getMinutes());
+                $('.time').html(clock.getHours() + " : " + clock.getMinutes());
             }
-            setInterval(setTime,1000);
+            setTimeout(setTime,1000);
         });
         
     </script>
